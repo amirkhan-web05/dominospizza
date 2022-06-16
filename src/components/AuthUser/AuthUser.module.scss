@@ -1,0 +1,142 @@
+.popup {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 40020;
+  padding: 30px;
+  height: 100%;
+  background-color: rgba(11, 11, 11, 0.5);
+  animation: 300ms cubic-bezier(1, -0.03, 0.27, 0.88) 0s 1 normal forwards running hHVIeU;
+
+  &__email {
+    position: relative;
+    top: -30px;
+    color: rgb(224, 67, 30);
+    font-size: 12px;
+  }
+
+  &__error {
+    position: relative;
+    z-index: 10;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    color: rgb(11, 11, 11);
+    padding: 2px 0px 0px;
+    appearance: none;
+    background-color: transparent !important;
+    border-bottom: 1px solid rgb(224, 67, 30);
+  }
+
+  &__password {
+    position: relative;
+    top: -30px;
+    color: rgb(224, 67, 30);
+    font-size: 12px;
+  }
+
+  &__inner {
+    margin: 10% auto;
+    position: relative;
+    user-select: text;
+    border-radius: 16px;
+    padding: 40px 30px 25px;
+    background-color: rgb(255, 255, 255);
+    width: 416px;
+    height: 320px;
+  }
+
+  &__form {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__reg {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  &__btn {
+    outline: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgb(227, 24, 54);
+    background-color: rgb(227, 24, 54);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__close {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -28px;
+    right: -48px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0.58, 1.68) 0s, background-color 0.3s ease 0s;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      background-color: white;
+      border-radius: 2px;
+      width: 50%;
+      transform: rotate(-45deg);
+      height: 2px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      background-color: white;
+      border-radius: 2px;
+      width: 50%;
+      transform: rotate(45deg);
+      height: 2px;
+    }
+  }
+
+  &__input {
+    position: relative;
+    z-index: 10;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    color: rgb(11, 11, 11);
+    padding: 2px 0px 0px;
+    appearance: none;
+    background-color: transparent !important;
+    border-bottom: 1px solid gray;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

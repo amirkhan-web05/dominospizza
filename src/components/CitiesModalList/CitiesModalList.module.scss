@@ -1,0 +1,45 @@
+.popup {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 40020;
+  overflow: hidden;
+  padding: 30px;
+  height: 100%;
+  background-color: rgba(11, 11, 11, 0.5);
+  animation: 300ms cubic-bezier(1, -0.03, 0.27, 0.88) 0s 1 normal forwards running hHVIeU;
+
+  &__inner {
+    margin: 5% auto;
+    position: relative;
+    border-radius: 16px;
+    padding: 40px 30px 25px;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 500px;
+    // height: 100%;
+  }
+
+  &__search {
+    width: 80%;
+    margin-bottom: 30px;
+    border-top: none;
+    outline: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  &__city {
+    width: 28%;
+    margin-left: 20px;
+  }
+
+  &__cities {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    height: 400px;
+  }
+}

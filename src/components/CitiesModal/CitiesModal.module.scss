@@ -1,0 +1,9 @@
+@import '../../scss/variable';
+
+.cities__name {
+  width: 85%;
+  text-decoration: none;
+  color: $black;
+  text-align: left;
+  cursor: pointer;
+}

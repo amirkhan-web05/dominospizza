@@ -1,0 +1,57 @@
+@import '../../scss/variable';
+
+.card {
+  border: none;
+  transition: .1s linear;
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 20px 1px rgba(34, 60, 80, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &-text {
+    color: $gray !important;
+    margin: 30px 0;
+    font-size: 14px;
+  }
+
+  &-body {
+    padding: 16px;
+    background-color: $white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &__btn {
+    outline: none;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid $access;
+    background-color: transparent;
+    color:$access;
+    font-size: 16px;
+    font-weight: 600;
+    appearance: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $access;
+    }
+  }
+}

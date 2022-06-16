@@ -1,0 +1,73 @@
+@import './fonts';
+@import './variable';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proximanov-light';
+  background-color: #f3f3f7;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  width: 48px !important;
+  border: none;
+  outline: none;
+  height: 48px !important;
+  background: rgb(255, 255, 255);
+  color: rgb(120, 124, 130);
+  border-radius: 50%;
+  transition: transform 0.2s ease 0s;
+  direction: rtl;
+  text-indent: 4px;
+
+  &::after {
+    font-size: 18px !important;
+    color: $gray;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  background: rgba(11, 11, 11, 0.2);
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  background-color: rgb(227, 24, 54) !important;
+}

@@ -1,0 +1,113 @@
+@import '../../scss/variable';
+
+.filters {
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category {
+  display: flex;
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 28px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  transition: width 0.3s cubic-bezier(0, 0.86, 0.5, 1.23) 0s;
+
+  &__btn {
+    outline: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 8px;
+    color: rgb(120, 124, 130);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
+    height: 32px;
+    border-radius: 16px;
+    border: 1px solid rgb(196, 196, 196);
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__active {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 8px;
+    border-radius: 16px;
+    border: 1px solid rgb(196, 196, 196);
+    color: rgb(227, 24, 54);
+    background-color: rgba(227, 24, 54, 0.1);
+    border-color: transparent;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.btn__active {
+  outline: none;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  margin: 0 5px;
+  align-items: center;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid rgb(196, 196, 196);
+  background-color: transparent;
+  color: $dark;
+  font-size: 14px;
+  font-weight: 600;
+  appearance: none;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.btn__default {
+  outline: none;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin: 0 5px;
+  border-radius: 16px;
+  border: 1px solid rgb(196, 196, 196);
+  background-color: transparent;
+  color: rgb(196, 196, 196);
+  font-size: 14px;
+  font-weight: 600;
+  appearance: none;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

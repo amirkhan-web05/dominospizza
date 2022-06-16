@@ -1,0 +1,856 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Жюльен",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/JULIEN/NULL/NULL/RU",
+      "description": "Грибы, Курица, Лук, Сыр Моцарелла, Соус сметанный с грибами",
+      "price": 499,
+      "plusChecked": false,
+      "category": "Вегетерианская",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        499,
+        768,
+        948
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Хот-дог",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
+      "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
+      "price": 499,
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "category": "Острая",
+      "typePrices": [
+        499,
+        768,
+        948
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Домашняя с сосисками",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/DOMSOS/NULL/NULL/RU",
+      "description": "Свежие томаты, Сыр Моцарелла, Томатный соус , Сосиски",
+      "price": 359,
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "category": "С грибами",
+      "typePrices": [
+        359,
+        629,
+        769
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Чикен Сладкий Чили",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CHIKS4/NULL/NULL/RU",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус , Соус Сладкий Чили",
+      "price": 499,
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "category": "Вегетерианская",
+      "typePrices": [
+        499,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 5,
+      "name": "4 сезона",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/4SEASON/NULL/NULL/RU",
+      "description": "Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы маринованные, Охотничьи колбаски, Пепперони",
+      "price": 789,
+      "plusChecked": false,
+      "category": "Острая",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        789,
+        939
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Сырная с ветчиной",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CHHM/NULL/NULL/RU",
+      "description": "Ветчина, Сыр Моцарелла, Томатный соус",
+      "price": 289,
+      "plusChecked": false,
+      "completed": false,
+      "category": "Без лука",
+      "count": 1,
+      "typePrices": [
+        289,
+        549,
+        659
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Пепперони по-деревенски",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/PEPDER/NULL/NULL/RU",
+      "description": "Огурцы маринованные, Пепперони, Сыр Моцарелла, Томатный соус",
+      "price": 289,
+      "plusChecked": false,
+      "completed": false,
+      "category": "Вегетерианская",
+      "count": 1,
+      "typePrices": [
+        289,
+        549,
+        659
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Пепперони",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ПЕПЕ/NULL/NULL/RU",
+      "description": "Пепперони, Сыр Моцарелла, Томатный соус",
+      "price": 429,
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "category": "Острая",
+      "typePrices": [
+        429,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Домино'c",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_ДОМИНОС/NULL/NULL/RU",
+      "description": "Бекон, Грибы, Курица, Лук, Огурцы маринованные, Охотничьи колбаски, Пепперони, Свежие томаты, Сыр",
+      "price": 639,
+      "plusChecked": false,
+      "category": "Без лука",
+      "completed": false,
+      "count": 1,
+      "hit": "popular",
+      "typePrices": [
+        639,
+        929,
+        1059
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Маргарита Гурме",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_МАРГГРМ/NULL/NULL/RU",
+      "description": "Свежие томаты, Сыр Моцарелла, Томатный соус",
+      "price": 359,
+      "plusChecked": false,
+      "category": "Вегетерианская",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        359,
+        629,
+        769
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Гавайская",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ГАВА/NULL/NULL/RU",
+      "description": "Ананас, Ветчина, Сыр Моцарелла, Томатный соус",
+      "price": 359,
+      "plusChecked": false,
+      "completed": false,
+      "category": "Вегетерианская",
+      "count": 1,
+      "typePrices": [
+        359,
+        629,
+        769
+      ]
+    },
+    {
+      "id": 12,
+      "name": "4 Сыра",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/4CHEESE/NULL/NULL/RU",
+      "description": "Соус Карбонара, Сыр Чеддер (тёртый), Сыр Моцарелла, Сыр Роккфорти, Чесночный соус с сыром Пармезан",
+      "price": 639,
+      "plusChecked": false,
+      "completed": false,
+      "category": "Без лука",
+      "count": 1,
+      "hit": "popular",
+      "typePrices": [
+        639,
+        929,
+        1059
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Веджи Fit & Fresh",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ВЕДЖ/NULL/NULL/RU",
+      "description": "Грибы, Маслины, Свежие томаты, Сыр Моцарелла, Сыр Фета, Томатный соус",
+      "price": 499,
+      "plusChecked": false,
+      "completed": false,
+      "category": "Без лука",
+      "count": 1,
+      "typePrices": [
+        499,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Чикен BBQ",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ЧBBQ/NULL/NULL/RU",
+      "description": "Грибы, Курица, Лук, Соус BBQ, Сыр Моцарелла, Томатный соус",
+      "price": 429,
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "category": "С грибами",
+      "hit": "popular",
+      "typePrices": [
+        429,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Карамельный Ананас",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/KARPNAPL/NULL/NULL/RU",
+      "description": "Ананас, Соус Карамельный, Соус Сырный, Сыр Моцарелла",
+      "price": 499,
+      "plusChecked": false,
+      "category": "Без лука",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        499,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Маргарита",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/МАРГ/NULL/NULL/RU",
+      "description": "Сыр Моцарелла, Томатный соус",
+      "price": 289,
+      "category": "Вегетерианская",
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        289,
+        549,
+        659
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Ветчина и грибы",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ВЕИГ/NULL/NULL/RU",
+      "description": "Ветчина, Грибы, Сыр Моцарелла, Томатный соус",
+      "price": 499,
+      "plusChecked": false,
+      "category": "С грибами",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        499,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Карбонара",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CARBON/NULL/NULL/RU",
+      "description": "Бекон, Свежие томаты, Соус Карбонара, Сыр Моцарелла",
+      "price": 499,
+      "category": "С грибами",
+      "plusChecked": false,
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        499,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Мясная",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/МЯС/NULL/NULL/RU",
+      "description": "Ветчина, Курица, Охотничьи колбаски, Пепперони, Сыр Моцарелла, Томатный соус",
+      "price": 709,
+      "plusChecked": false,
+      "category": "Вегетерианская",
+      "completed": false,
+      "count": 1,
+      "hit": "popular",
+      "typePrices": [
+        709,
+        999,
+        1119
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Баварская",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_BAVAR/NULL/NULL/RU",
+      "description": "Лук, Огурцы маринованные, Охотничьи колбаски, Сыр Моцарелла, Томатный соус",
+      "price": 569,
+      "plusChecked": false,
+      "completed": false,
+      "category": "Мясная",
+      "count": 1,
+      "typePrices": [
+        569,
+        859,
+        999
+      ]
+    },
+    {
+      "id": 21,
+      "name": "3 Мяса",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_3MEAT/NULL/NULL/RU",
+      "description": "Бекон, Ветчина, Охотничьи колбаски, Сыр Моцарелла, Томатный соус",
+      "price": 569,
+      "plusChecked": false,
+      "category": "Острая",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        569,
+        859,
+        999
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Чикен Карри",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ЧИКА/NULL/NULL/RU",
+      "description": "Ананас, Ветчина, Курица, Соус Карри, Сыр Моцарелла, Томатный соус",
+      "price": 639,
+      "plusChecked": false,
+      "category": "Мясная",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        639,
+        959,
+        1056
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Микс BBQ",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BBQM/NULL/NULL/RU",
+      "description": "Бекон, Ветчина, Курица, Лук, Соус BBQ, Сыр Моцарелла, Томатный соус",
+      "price": 569,
+      "plusChecked": false,
+      "category": "Мясная",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        569,
+        859,
+        999
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Дабл Пепперони",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_DPEP/NULL/NULL/RU",
+      "description": "Пепперони, Сыр Моцарелла, Томатный соус",
+      "price": 569,
+      "plusChecked": false,
+      "category": "С Мясная",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        569,
+        859,
+        999
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Диабло",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ДИА/NULL/NULL/RU",
+      "description": "Лук, Пепперони, Перец Халапеньо, Свежие томаты, Сыр Моцарелла, Томатный соус",
+      "price": 569,
+      "plusChecked": false,
+      "category": "Мясная",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        569,
+        859,
+        999
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Роял Чизбургер",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ЧИЗБ/NULL/NULL/RU",
+      "description": "Бекон, Курица, Лук, Огурцы маринованные, Свежие томаты, Сыр Моцарелла, Сыр Чеддер (ломтиками),",
+      "price": 709,
+      "plusChecked": false,
+      "category": "Вегетерианская",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        709,
+        999,
+        1119
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Пицца Пай Бекон",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BREADBJ/NULL/NULL/RU",
+      "description": "Бекон, Перец Халапеньо, Сыр Моцарелла",
+      "price": 429,
+      "plusChecked": false,
+      "category": "С грибами",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        429,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Пицца Пай Ветчина и сыр",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BREADHCH/NULL/NULL/RU",
+      "description": "Ветчина, Сыр Моцарелла",
+      "price": 429,
+      "plusChecked": false,
+      "category": "С грибами",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        429,
+        709,
+        879
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Пицца Пай Двойной сыр",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BREADDCH/NULL/NULL/RU",
+      "description": "Сыр Моцарелла",
+      "price": 429,
+      "plusChecked": false,
+      "category": "С грибами",
+      "completed": false,
+      "count": 1,
+      "typePrices": [
+        429,
+        709,
+        879
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "name": "Хот-дог",
+      "price": 499,
+      "count": 1,
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
+      "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
+      "plusChecked": false,
+      "categoryPrice": 499,
+      "typePrices": 499
+    }
+  ],
+  "users": [
+    {
+      "email": "amirhanvalman@gmail.com",
+      "password": "$2a$10$D2lFSIor.t4IUnZUJfxhV.TzUxwWHx/5vZlEIFL0imci2Jnty1g1a",
+      "username": "Amirkhan",
+      "id": 1
+    }
+  ],
+  "halves": [
+    {
+      "id": 1,
+      "name": "Жюльен",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/JULIEN/NULL/NULL/RU",
+      "description": "Грибы, Курица, Лук, Сыр Моцарелла, Соус сметанный с грибами",
+      "price": 499,
+      "plusChecked": false,
+      "isHalves": false,
+      "category": "Вегетерианская",
+      "completed": false,
+      "count": 1,
+      "halvesImages": [
+        "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/JULIEN/NULL/NULL/RU"
+      ],
+      "typePrices": [
+        499,
+        768,
+        948
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Хот-дог",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
+      "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
+      "price": 499,
+      "plusChecked": false,
+      "completed": false,
+      "isHalves": false,
+      "count": 1,
+      "category": "Острая",
+      "halvesImages": [
+        "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU"
+      ],
+      "typePrices": [
+        499,
+        768,
+        948
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "coords": {
+        "lat": "55.75583",
+        "lon": "37.61778"
+      },
+      "district": "Центральный",
+      "name": "Москва",
+      "population": 12655050,
+      "subject": "Москва"
+    },
+    {
+      "coords": {
+        "lat": "59.95",
+        "lon": "30.31667"
+      },
+      "district": "Северо-Западный",
+      "name": "Санкт-Петербург",
+      "population": 5384342,
+      "subject": "Санкт-Петербург"
+    },
+    {
+      "coords": {
+        "lat": "45.03333",
+        "lon": "38.98333"
+      },
+      "district": "Южный",
+      "name": "Краснодар",
+      "population": 948827,
+      "subject": "Краснодарский край"
+    },
+    {
+      "coords": {
+        "lat": "47.24056",
+        "lon": "39.71056"
+      },
+      "district": "Южный",
+      "name": "Ростов-на-Дону",
+      "population": 1137704,
+      "subject": "Ростовская область"
+    },
+    {
+      "coords": {
+        "lat": "55.8",
+        "lon": "37.93333"
+      },
+      "district": "Центральный",
+      "name": "Балашиха",
+      "population": 215353,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.55",
+        "lon": "37.7"
+      },
+      "district": "Центральный",
+      "name": "Видное",
+      "population": 56798,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "51.67167",
+        "lon": "39.21056"
+      },
+      "district": "Центральный",
+      "name": "Воронеж",
+      "population": 1050602,
+      "subject": "Воронежская область"
+    },
+    {
+      "coords": {
+        "lat": "55.63333",
+        "lon": "37.85"
+      },
+      "district": "Центральный",
+      "name": "Дзержинский",
+      "population": 47125,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "56.34667",
+        "lon": "37.52167"
+      },
+      "district": "Центральный",
+      "name": "Дмитров",
+      "population": 61454,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.93333",
+        "lon": "37.5"
+      },
+      "district": "Центральный",
+      "name": "Долгопрудный",
+      "population": 90976,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.44389",
+        "lon": "37.75806"
+      },
+      "district": "Центральный",
+      "name": "Домодедово",
+      "population": 96123,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.60111",
+        "lon": "38.11611"
+      },
+      "district": "Центральный",
+      "name": "Жуковский",
+      "population": 102729,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.97",
+        "lon": "37.92"
+      },
+      "district": "Центральный",
+      "name": "Ивантеевка",
+      "population": 58594,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.79083",
+        "lon": "49.11444"
+      },
+      "district": "Приволжский",
+      "name": "Казань",
+      "population": 1257341,
+      "subject": "Татарстан"
+    },
+    {
+      "coords": {
+        "lat": "55.09389",
+        "lon": "38.76806"
+      },
+      "district": "Центральный",
+      "name": "Коломна",
+      "population": 144642,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.91667",
+        "lon": "37.81667"
+      },
+      "district": "Центральный",
+      "name": "Королёв",
+      "population": 225858,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.6625",
+        "lon": "37.86722"
+      },
+      "district": "Центральный",
+      "name": "Котельники",
+      "population": 32347,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.81667",
+        "lon": "37.33333"
+      },
+      "district": "Центральный",
+      "name": "Красногорск",
+      "population": 116738,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "52.61667",
+        "lon": "39.6"
+      },
+      "district": "Центральный",
+      "name": "Липецк",
+      "population": 508124,
+      "subject": "Липецкая область"
+    },
+    {
+      "coords": {
+        "lat": "56.01194",
+        "lon": "37.47444"
+      },
+      "district": "Центральный",
+      "name": "Лобня",
+      "population": 74350,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.68139",
+        "lon": "37.89389"
+      },
+      "district": "Центральный",
+      "name": "Люберцы",
+      "population": 171978,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.91667",
+        "lon": "37.73333"
+      },
+      "district": "Центральный",
+      "name": "Мытищи",
+      "population": 173341,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.85",
+        "lon": "38.43333"
+      },
+      "district": "Центральный",
+      "name": "Ногинск",
+      "population": 99762,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.67333",
+        "lon": "37.27333"
+      },
+      "district": "Центральный",
+      "name": "Одинцово",
+      "population": 139021,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "55.42972",
+        "lon": "37.54444"
+      },
+      "district": "Центральный",
+      "name": "Подольск",
+      "population": 187956,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "56.01667",
+        "lon": "37.85"
+      },
+      "district": "Центральный",
+      "name": "Пушкино",
+      "population": 102840,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "54.83333",
+        "lon": "37.61667"
+      },
+      "district": "Центральный",
+      "name": "Пущино",
+      "population": 20263,
+      "subject": "Московская область"
+    },
+    {
+      "coords": {
+        "lat": "57.06667",
+        "lon": "27.91667"
+      },
+      "district": "Северо-Западный",
+      "name": "Пыталово",
+      "population": 5826,
+      "subject": "Псковская область"
+    },
+    {
+      "coords": {
+        "lat": "60.75",
+        "lon": "72.78333"
+      },
+      "district": "Уральский",
+      "name": "Пыть-Ях",
+      "population": 41453,
+      "subject": "Ханты-Мансийский АО — Югра"
+    },
+    {
+      "coords": {
+        "lat": "44.0499664",
+        "lon": "43.0600548"
+      },
+      "district": "Северо-Кавказский",
+      "name": "Пятигорск",
+      "population": 142397,
+      "subject": "Ставропольский край"
+    },
+    {
+      "coords": {
+        "lat": "55.99778",
+        "lon": "40.32972"
+      },
+      "district": "Центральный",
+      "name": "Радужный",
+      "population": 18212,
+      "subject": "Владимирская область"
+    },
+    {
+      "coords": {
+        "lat": "62.13333",
+        "lon": "77.46667"
+      },
+      "district": "Уральский",
+      "name": "Радужный",
+      "population": 43394,
+      "subject": "Ханты-Мансийский АО — Югра"
+    }
+  ]
+}

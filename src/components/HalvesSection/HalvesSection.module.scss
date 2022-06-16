@@ -1,0 +1,142 @@
+@import '../../scss/variable';
+
+.halves {
+  width: 75%;
+  margin: 0 auto;
+
+  &__inner {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 18px 18px 0px 0px;
+  }
+
+  &__images {
+    display: flex;
+    width: 226px;
+    height: 220px;
+
+    &-min {
+      display: flex;
+      width: 75px;
+      height: 73px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-left: 45px;
+  }
+
+  &__block {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: 104px;
+    border: 1px solid rgb(243, 243, 247);
+    border-radius: 8px;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  &__preview {
+    display: flex;
+    align-items: center;
+
+    span {
+      padding: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: rgb(106, 106, 118);
+    }
+  }
+
+  &__left {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+
+  &__right {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+  }
+
+  &__type {
+    width: 100%;
+    position: relative;
+    border-radius: 40px;
+    background-color: rgb(243, 243, 247);
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    &-item {
+      width: 50%;
+      border: none;
+      border-radius: inherit;
+      background-color: inherit;
+      cursor: pointer;
+      color: white;
+      outline: none;
+      transition: color 0.2s ease-in 0s;
+      color: rgb(106, 106, 118);
+    }
+
+    &-active {
+      width: 50%;
+      border: none;
+      color: $white;
+      top: 0px;
+      z-index: 1;
+      height: 100%;
+      background-color: rgb(120, 124, 130);
+      border-radius: inherit;
+      transition: left 0.2s cubic-bezier(0, 0.81, 0.98, 0.99) 0s;
+    }
+
+    &-buy {
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      height: 40px;
+      padding: 8px 16px;
+      border: 1px solid rgb(227, 24, 54);
+      border-radius: 22px;
+      outline: none;
+      background-color: rgb(227, 24, 54);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.items-list {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

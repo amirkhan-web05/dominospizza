@@ -1,0 +1,20 @@
+@import './../../scss/variable';
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+
+  &__item {
+    display: block;
+    color: $white;
+    margin: 0 20px;
+    padding-top: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

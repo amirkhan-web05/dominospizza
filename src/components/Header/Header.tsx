@@ -17,13 +17,16 @@ import { Outlet } from 'react-router-dom';
 import { Cart } from '../Cart/Cart';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchGetCart } from '../../redux/actions/action-cart';
-import { TypeAuthUser, TypeCartItems } from '../../types';
+import { TypeAuthUser, TypeTicketItems } from '../../types';
 import { AuthUser } from '../AuthUser/AuthUser';
 import { fetchLogout } from '../../redux/actions/action-auth';
 import { CitiesModalList } from '../CitiesModalList/CitiesModalList';
 import { fetchCities } from '../../redux/actions/action-items';
 import { CSSTransition } from 'react-transition-group';
 import { NavBar } from '../NavBar/NavBar';
+import { AxiosResponse } from 'axios';
+import { apiTicket } from '../../api/ticket-api';
+import { actions } from '../../redux/actions/action-creators';
 
 const sliderImages = [
   {
@@ -43,11 +46,33 @@ const sliderImages = [
 export const Header: React.FC = () => {
   const dispatch = useAppDispatch()
   const headerRef = useRef<HTMLDivElement>(null)
-  const cartRef = useRef<any>()
+  const cartRef = useRef<null | HTMLDivElement>(null)
 
   const cart = useAppSelector(state => state.cart.cart)
   const auth:TypeAuthUser[] | null = useAppSelector(state => state.auth.auth)
+  
   const cities = useAppSelector(state => state.cities.cities)
+  const [ticket, setTicket] = useState<TypeTicketItems[]>([])
+  const [valueTicket, setValueTicket] = useState('')
+
+  const useTicket = (e:React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    apiTicket.getTicket(valueTicket).then(({data}:AxiosResponse<TypeTicketItems[]>) => {
+      if (data[0].title.length === valueTicket.length) {
+        setTicket(data)
+      }
+    })
+  }
+
+  const refundTicket = () => {
+    setTicket([])
+  }
+
+  useEffect(() => {
+    apiTicket.getTicket(valueTicket).then(({data}) => {
+      setTicket(data)
+    })
+  }, [])
 
   const [modal, setModal] = useState(false)
   const [popup, setPopup] = useState(false)
@@ -80,7 +105,6 @@ export const Header: React.FC = () => {
   useEffect(() => {
     dispatch(fetchCities(value))
   }, [value])
-
 
   useEffect(() => {
     document.body.addEventListener('click', (event:any) => {
@@ -144,12 +168,12 @@ export const Header: React.FC = () => {
               <div className="d-flex align-items-center justify-content-between">
                 <NavBar/>
                 <div ref={cartRef} className={styles.header__block}>
-                  <div className={styles.header__search}>
-                    <input placeholder='Промокод' className={styles.header__input} type="text" />
-                    <button className={styles.header__button}>
+                  <form onSubmit={useTicket} className={styles.header__search}>
+                    <input value={valueTicket} onChange={e => setValueTicket(e.target.value)} placeholder='Промокод' className={styles.header__input} type="text" />
+                    <button type='submit' className={styles.header__button}>
                       <img width={20} src={arrowImg} alt="" />
                     </button>
-                  </div>
+                  </form>
                   <div className={styles.header__cart}>
                     <span className={styles.header__count}>{cart.length}</span>
                     <div onClick={handlerChangeModal} className={styles.header__basket}>
@@ -158,6 +182,8 @@ export const Header: React.FC = () => {
                   </div>
                   <Cart 
                     cart={cart} 
+                    ticket={ticket}
+                    onClickTicketItems={refundTicket}
                     modal={modal} 
                     setModal={setModal} 
                   />

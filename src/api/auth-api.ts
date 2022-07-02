@@ -1,4 +1,4 @@
-import { TypeAuthMaterial, TypeAuthUser } from './../types/index';
+import { TypeAuthMaterial, TypeAuthUser, TypeFormAuth, TypeRegisterForm } from './../types/index';
 import { instance } from './api';
 
 type MeResponseType = TypeAuthUser[] 
@@ -8,13 +8,13 @@ export const authAPI = {
   me() {
     return instance.get<MeResponseType>('/users')
   },
-  login(data:TypeAuthMaterial) {
+  login(data:TypeFormAuth) {
     return instance.post<MeResponseType>('/login', data)
   },
   logout(id:number) {
     return instance.delete<number>(`/users/${id}`)
   },
-  register(data:TypeAuthMaterial) {
+  register(data:TypeRegisterForm) {
     return instance.post<RegisterResponseType>(`/users`, data)
   }
 }

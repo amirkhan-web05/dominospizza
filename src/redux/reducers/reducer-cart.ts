@@ -29,12 +29,25 @@ export const cart = (state:TypeInitialState = initialState, action:TypeData):Typ
       }
     }
 
-    case Types.APP_PATCH_CART: {
+    case Types.APP_PLUS_CART: {
       return {
         ...state,
         cart:state.cart.map(item => {
           if (item.id === action.id) {
             item.count += 1
+          }
+
+          return item
+        })
+      }
+    }
+
+    case Types.APP_MINUS_CART: {
+      return {
+        ...state,
+        cart:state.cart.map(item => {
+          if (item.id === action.id) {
+            item.count === 1 ? item.count = 1 : item.count -= 1
           }
 
           return item

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import qs from 'qs'
-import { CartList, sortByItems } from '../components/CartList/CartList'
+import { CartList } from '../components/CartList/CartList'
 import { useAppDispatch, useAppSelector } from '../hooks'
 import { fetchAuth } from '../redux/actions/action-auth'
-import { fetchPatchCart, fetchPostCart } from '../redux/actions/action-cart'
+import { fetchPlusCart, fetchPostCart } from '../redux/actions/action-cart'
 import { actions } from '../redux/actions/action-creators'
 import { fetchPizzas } from '../redux/actions/action-items'
 import { TypeCartItems, TypeCategoryBtn, TypeSortItems } from '../types'
@@ -21,14 +21,19 @@ export const HomePage:React.FC = () => {
   const sortBy = useAppSelector(state => state.filters.sortBy)
   const categoryBtn = useAppSelector(state => state.filters.categoryBtn)
 
-  const onAddHandlerCart = (items:TypeCartItems):void => {
-    const findItems = cart.find(item => item.id === items.id) 
+  console.log(cart)
+
+  const onAddHandlerCart = (obj:TypeCartItems):void => {
+
+    // Если id === typId не совпадают, то добавляет))
+    const findItems = cart.find(item => item.id === obj.id) 
+    console.log(findItems)
 
     if (findItems) {
-      const {id, count} = items
-      dispatch(fetchPatchCart(id, count + 1))
+      const {id, count} = obj
+      dispatch(fetchPlusCart(id, count + 1))
     } else {
-      dispatch(fetchPostCart(items))
+      dispatch(fetchPostCart(obj))
     }
   }
 

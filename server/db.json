@@ -1,7 +1,11 @@
 {
   "pizzas": [
     {
-      "id": 1,
+      "id": [
+        1,
+        2,
+        3
+      ],
       "name": "Жюльен",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/JULIEN/NULL/NULL/RU",
       "description": "Грибы, Курица, Лук, Сыр Моцарелла, Соус сметанный с грибами",
@@ -17,7 +21,11 @@
       ]
     },
     {
-      "id": 2,
+      "id": [
+        4,
+        5,
+        6
+      ],
       "name": "Хот-дог",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
       "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
@@ -33,7 +41,11 @@
       ]
     },
     {
-      "id": 3,
+      "id": [
+        7,
+        8,
+        9
+      ],
       "name": "Домашняя с сосисками",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/DOMSOS/NULL/NULL/RU",
       "description": "Свежие томаты, Сыр Моцарелла, Томатный соус , Сосиски",
@@ -49,7 +61,11 @@
       ]
     },
     {
-      "id": 4,
+      "id": [
+        10,
+        11,
+        12
+      ],
       "name": "Чикен Сладкий Чили",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CHIKS4/NULL/NULL/RU",
       "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус , Соус Сладкий Чили",
@@ -65,7 +81,11 @@
       ]
     },
     {
-      "id": 5,
+      "id": [
+        13,
+        14,
+        15
+      ],
       "name": "4 сезона",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/4SEASON/NULL/NULL/RU",
       "description": "Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы маринованные, Охотничьи колбаски, Пепперони",
@@ -80,7 +100,11 @@
       ]
     },
     {
-      "id": 6,
+      "id": [
+        16,
+        17,
+        18
+      ],
       "name": "Сырная с ветчиной",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CHHM/NULL/NULL/RU",
       "description": "Ветчина, Сыр Моцарелла, Томатный соус",
@@ -96,7 +120,11 @@
       ]
     },
     {
-      "id": 7,
+      "id": [
+        19,
+        20,
+        21
+      ],
       "name": "Пепперони по-деревенски",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/PEPDER/NULL/NULL/RU",
       "description": "Огурцы маринованные, Пепперони, Сыр Моцарелла, Томатный соус",
@@ -112,7 +140,11 @@
       ]
     },
     {
-      "id": 8,
+      "id": [
+        22,
+        23,
+        24
+      ],
       "name": "Пепперони",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ПЕПЕ/NULL/NULL/RU",
       "description": "Пепперони, Сыр Моцарелла, Томатный соус",
@@ -128,7 +160,11 @@
       ]
     },
     {
-      "id": 9,
+      "id": [
+        25,
+        26,
+        27
+      ],
       "name": "Домино'c",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_ДОМИНОС/NULL/NULL/RU",
       "description": "Бекон, Грибы, Курица, Лук, Огурцы маринованные, Охотничьи колбаски, Пепперони, Свежие томаты, Сыр",
@@ -145,7 +181,11 @@
       ]
     },
     {
-      "id": 10,
+      "id": [
+        28,
+        29,
+        30
+      ],
       "name": "Маргарита Гурме",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_МАРГГРМ/NULL/NULL/RU",
       "description": "Свежие томаты, Сыр Моцарелла, Томатный соус",
@@ -161,7 +201,11 @@
       ]
     },
     {
-      "id": 11,
+      "id": [
+        31,
+        32,
+        33
+      ],
       "name": "Гавайская",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ГАВА/NULL/NULL/RU",
       "description": "Ананас, Ветчина, Сыр Моцарелла, Томатный соус",
@@ -177,7 +221,11 @@
       ]
     },
     {
-      "id": 12,
+      "id": [
+        34,
+        35,
+        36
+      ],
       "name": "4 Сыра",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/4CHEESE/NULL/NULL/RU",
       "description": "Соус Карбонара, Сыр Чеддер (тёртый), Сыр Моцарелла, Сыр Роккфорти, Чесночный соус с сыром Пармезан",
@@ -194,7 +242,11 @@
       ]
     },
     {
-      "id": 13,
+      "id": [
+        37,
+        38,
+        39
+      ],
       "name": "Веджи Fit & Fresh",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ВЕДЖ/NULL/NULL/RU",
       "description": "Грибы, Маслины, Свежие томаты, Сыр Моцарелла, Сыр Фета, Томатный соус",
@@ -210,7 +262,11 @@
       ]
     },
     {
-      "id": 14,
+      "id": [
+        40,
+        41,
+        42
+      ],
       "name": "Чикен BBQ",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ЧBBQ/NULL/NULL/RU",
       "description": "Грибы, Курица, Лук, Соус BBQ, Сыр Моцарелла, Томатный соус",
@@ -227,7 +283,11 @@
       ]
     },
     {
-      "id": 15,
+      "id": [
+        43,
+        44,
+        45
+      ],
       "name": "Карамельный Ананас",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/KARPNAPL/NULL/NULL/RU",
       "description": "Ананас, Соус Карамельный, Соус Сырный, Сыр Моцарелла",
@@ -243,7 +303,11 @@
       ]
     },
     {
-      "id": 16,
+      "id": [
+        46,
+        47,
+        48
+      ],
       "name": "Маргарита",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/МАРГ/NULL/NULL/RU",
       "description": "Сыр Моцарелла, Томатный соус",
@@ -259,7 +323,11 @@
       ]
     },
     {
-      "id": 17,
+      "id": [
+        49,
+        50,
+        51
+      ],
       "name": "Ветчина и грибы",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ВЕИГ/NULL/NULL/RU",
       "description": "Ветчина, Грибы, Сыр Моцарелла, Томатный соус",
@@ -275,7 +343,11 @@
       ]
     },
     {
-      "id": 18,
+      "id": [
+        52,
+        53,
+        54
+      ],
       "name": "Карбонара",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CARBON/NULL/NULL/RU",
       "description": "Бекон, Свежие томаты, Соус Карбонара, Сыр Моцарелла",
@@ -291,7 +363,11 @@
       ]
     },
     {
-      "id": 19,
+      "id": [
+        55,
+        56,
+        57
+      ],
       "name": "Мясная",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/МЯС/NULL/NULL/RU",
       "description": "Ветчина, Курица, Охотничьи колбаски, Пепперони, Сыр Моцарелла, Томатный соус",
@@ -308,7 +384,11 @@
       ]
     },
     {
-      "id": 20,
+      "id": [
+        58,
+        59,
+        60
+      ],
       "name": "Баварская",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_BAVAR/NULL/NULL/RU",
       "description": "Лук, Огурцы маринованные, Охотничьи колбаски, Сыр Моцарелла, Томатный соус",
@@ -324,7 +404,11 @@
       ]
     },
     {
-      "id": 21,
+      "id": [
+        61,
+        62,
+        63
+      ],
       "name": "3 Мяса",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_3MEAT/NULL/NULL/RU",
       "description": "Бекон, Ветчина, Охотничьи колбаски, Сыр Моцарелла, Томатный соус",
@@ -340,7 +424,11 @@
       ]
     },
     {
-      "id": 22,
+      "id": [
+        64,
+        65,
+        66
+      ],
       "name": "Чикен Карри",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ЧИКА/NULL/NULL/RU",
       "description": "Ананас, Ветчина, Курица, Соус Карри, Сыр Моцарелла, Томатный соус",
@@ -356,7 +444,11 @@
       ]
     },
     {
-      "id": 23,
+      "id": [
+        67,
+        68,
+        69
+      ],
       "name": "Микс BBQ",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BBQM/NULL/NULL/RU",
       "description": "Бекон, Ветчина, Курица, Лук, Соус BBQ, Сыр Моцарелла, Томатный соус",
@@ -372,7 +464,11 @@
       ]
     },
     {
-      "id": 24,
+      "id": [
+        70,
+        71,
+        72
+      ],
       "name": "Дабл Пепперони",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/_DPEP/NULL/NULL/RU",
       "description": "Пепперони, Сыр Моцарелла, Томатный соус",
@@ -388,7 +484,11 @@
       ]
     },
     {
-      "id": 25,
+      "id": [
+        73,
+        74,
+        75
+      ],
       "name": "Диабло",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ДИА/NULL/NULL/RU",
       "description": "Лук, Пепперони, Перец Халапеньо, Свежие томаты, Сыр Моцарелла, Томатный соус",
@@ -404,7 +504,11 @@
       ]
     },
     {
-      "id": 26,
+      "id": [
+        76,
+        77,
+        78
+      ],
       "name": "Роял Чизбургер",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/ЧИЗБ/NULL/NULL/RU",
       "description": "Бекон, Курица, Лук, Огурцы маринованные, Свежие томаты, Сыр Моцарелла, Сыр Чеддер (ломтиками),",
@@ -420,7 +524,11 @@
       ]
     },
     {
-      "id": 27,
+      "id": [
+        79,
+        80,
+        81
+      ],
       "name": "Пицца Пай Бекон",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BREADBJ/NULL/NULL/RU",
       "description": "Бекон, Перец Халапеньо, Сыр Моцарелла",
@@ -436,7 +544,11 @@
       ]
     },
     {
-      "id": 28,
+      "id": [
+        82,
+        83,
+        84
+      ],
       "name": "Пицца Пай Ветчина и сыр",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BREADHCH/NULL/NULL/RU",
       "description": "Ветчина, Сыр Моцарелла",
@@ -452,7 +564,11 @@
       ]
     },
     {
-      "id": 29,
+      "id": [
+        85,
+        86,
+        87
+      ],
       "name": "Пицца Пай Двойной сыр",
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/BREADDCH/NULL/NULL/RU",
       "description": "Сыр Моцарелла",
@@ -468,27 +584,9 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "id": 2,
-      "name": "Хот-дог",
-      "price": 499,
-      "count": 1,
-      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
-      "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
-      "plusChecked": false,
-      "categoryPrice": 499,
-      "typePrices": 499
-    }
-  ],
-  "users": [
-    {
-      "email": "amirhanvalman@gmail.com",
-      "password": "$2a$10$D2lFSIor.t4IUnZUJfxhV.TzUxwWHx/5vZlEIFL0imci2Jnty1g1a",
-      "username": "Amirkhan",
-      "id": 1
-    }
-  ],
+  "cart": [],
+  "users": [],
+  "tickets": [],
   "halves": [
     {
       "id": 1,
@@ -531,6 +629,7 @@
       ]
     }
   ],
+  "orders": [],
   "cities": [
     {
       "coords": {

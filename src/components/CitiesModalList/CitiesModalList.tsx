@@ -7,7 +7,7 @@ export const CitiesModalList:React.FC<TypeCitiesModalList> = ({cities, showCity,
   return (
     <div className={styles.popup}>
       <div className={styles.popup__inner}>
-        <button onClick={() => setClosePopup!(false)} style={{marginLeft:0}} className='btn btn-dark'>&times;</button>
+        <button onClick={() => setClosePopup!(false)} style={{marginLeft:0}} className={styles.popup__close}></button>
         <div className='d-flex align-items-center w-80'>
           <input
             value={value}

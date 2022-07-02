@@ -46,11 +46,23 @@ export const fetchDeleteCart = (id:number):TypeThunkAction => {
   }
 }
 
-export const fetchPatchCart = (id:number, count:number):TypeThunkAction => {
+export const fetchPlusCart = (id:number, count:number):TypeThunkAction => {
   return async (dispatch:DispatchType) => {
     try {
-      await cartAPI.patchCart(id, count).then(() => {
-        dispatch(actions.setCountCart(id, count))
+      await cartAPI.patchPlusCart(id, count).then(() => {
+        dispatch(actions.setPlusCart(id, count))
+      })
+    } catch (e) {
+      alert(e)
+    }
+  }
+}
+
+export const fetchMinusCart = (id:number, count:number):TypeThunkAction => {
+  return async (dispatch:DispatchType) => {
+    try {
+      await cartAPI.patchMinusCart(id, count).then(() => {
+        dispatch(actions.setMinusCart(id, count))
       })
     } catch (e) {
       alert(e)

@@ -1,9 +1,13 @@
+import { NotFoundPage } from './../pages/NotFoundPage';
 import { HalvesSection } from '../components/HalvesSection/HalvesSection';
 import { HomePage } from './../pages/HomePage';
+import { PaymentPage } from '../pages/PaymentPage';
 
 export const HOME_PAGE = '/'
 export const AUTH_PAGE = '/halves'
 export const REGISTER_ROUTE = '/register'
+export const NOT_FOUND_ROUTE = '*'
+export const PAYMENT_ROUTE = '/payment'
 
 export const PUBLIC_ROUTE = [
   {
@@ -13,6 +17,14 @@ export const PUBLIC_ROUTE = [
   {
     path:REGISTER_ROUTE,
     Element:HomePage
+  },
+  {
+    path:NOT_FOUND_ROUTE,
+    Element:NotFoundPage
+  },
+  {
+    path:PAYMENT_ROUTE,
+    Element:PaymentPage
   }
 ]
 

@@ -15,7 +15,7 @@ export const CartItems:React.FC<TypeCartItems> = ({id, name, price, plusChecked,
   const onAddInCart = ():void => {
     onAdd!(
         {
-          id, 
+          id:id[activeItem],
           name, 
           price, 
           count, 
@@ -24,7 +24,8 @@ export const CartItems:React.FC<TypeCartItems> = ({id, name, price, plusChecked,
           plusChecked, 
           categoryPrice:
           plusChecked ? typePrice : price, 
-          setPlusChecked, typePrices:
+          setPlusChecked, 
+          typePrices:
           typePrices[activeItem]
         }
       )

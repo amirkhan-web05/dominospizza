@@ -14,5 +14,5 @@ export const rootReducers = combineReducers({
   auth,
   cities,
   register,
-  halves
+  halves,
 })

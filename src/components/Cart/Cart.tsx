@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { useAppDispatch } from '../../hooks'
-import { fetchDeleteCart, fetchPatchCart } from '../../redux/actions/action-cart'
+import { fetchDeleteCart, fetchMinusCart, fetchPlusCart } from '../../redux/actions/action-cart'
 import { actions } from '../../redux/actions/action-creators'
+import { PAYMENT_ROUTE } from '../../routes'
 import { TypeCartItems, TypeModalCart } from '../../types'
 import { TypeCart } from '../TypeCart/TypeCart'
 import styles from './Cart.module.scss'
 
-export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart}) => {
-  const cartRef = useRef<any>()
+export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart, ticket, onClickTicketItems}) => {
   const dispatch = useAppDispatch()
   const typePrice = 59
 
@@ -27,8 +28,12 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart}) => {
     dispatch(fetchDeleteCart(id))
   }
 
-  const countCart = (id:number, count:number) => {
-    dispatch(fetchPatchCart(id, count + 1))
+  const plusCart = (id:number, count:number) => {
+    dispatch(fetchPlusCart(id, count + 1))
+  }
+
+  const minusCart = (id:number, count:number) => {
+    dispatch(fetchMinusCart(id, count - 1))
   }
 
   return (
@@ -64,12 +69,16 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart}) => {
                 <div className={styles['cart__info-border']}>
                   <div className="cart__indicator d-flex p-3 justify-content-between align-items-center">
                     <div className='d-flex align-items-center'>
-                      <div onClick={() => removeCart(item.id)} className={styles.cart__remove}>
+                      {item.count === 1 ? <div onClick={() => removeCart(item.id)} className={styles.cart__remove}>
                         <svg width="18" height="20" fill="none" viewBox="0 0 18 20"><g><path className="trash-cap" fill="#505061" d="M1 2a1 1 0 100 2h16a1 1 0 100-2H1z" fillRule="evenodd" clipRule="evenodd"></path><path className="trash-cap-handle" fill="#505061" fillRule="evenodd" d="M7 0a1 1 0 00-1 1v1h6V1a1 1 0 00-1-1H7z" clipRule="evenodd"></path></g><path fill="#505061" d="M1.922 6a.98.98 0 00-.988 1.065v.01l1.418 11.558a1.5 1.5 0 001.494 1.365H14.12a1.5 1.5 0 001.494-1.365l1.424-11.558v-.01A.982.982 0 0016.048 6a.987.987 0 00-.997.886L13.703 17.53v.01a.5.5 0 01-.5.459h-8.44a.5.5 0 01-.499-.459v-.01L2.922 6.887A.99.99 0 001.922 6z"></path><path fill="#505061" d="M6.5 6a.986.986 0 00-.998 1.033L6 15.034v.002c.028.53.468.964 1 .964.572 0 1.025-.495.997-1.066l-.5-8v-.002A.985.985 0 006.5 6zM11.5 6c-.532 0-.97.4-.998.932v.001l-.499 7.999v.002C9.974 15.505 10.428 16 11 16c.532 0 .972-.433 1-.964v-.002l.498-7.998v-.003A.986.986 0 0011.5 6z"></path></svg>
-                      </div>
+                      </div> : (
+                      <div className='d-flex align-items-center'>
+                        <button onClick={() => minusCart(item.id, item.count)} className={styles['cart__meter-btn']}>-</button>
+                      </div>      
+                      )}
                       <div className='d-flex align-items-center'>
                         <span className={styles.cart__meter}>{item.count}</span>
-                        <button onClick={() => countCart(item.id, item.count)} className={styles['cart__meter-btn']}>+</button>
+                        <button onClick={() => plusCart(item.id, item.count)} className={styles['cart__meter-btn']}>+</button>
                       </div>
                     </div>
                     <h5>{item.plusChecked ? item.typePrices * item.count + typePrice : item.typePrices * item.count} ₽ </h5>
@@ -86,9 +95,9 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart}) => {
             </div>
           )}
             {cart.length ? <div className={styles.cart__total}>
-            <div className={styles.cart__buy}>
-              <button>Оформить</button>
-              <h5>{totalCount}</h5>
+            <div onClick={() => onClickTicketItems([])} className={styles.cart__buy}>
+              <Link onClick={() => setModal(false)} style={{textDecoration:'none', color:'#fff'}} to={PAYMENT_ROUTE}>Оформить</Link>
+              <h5>{ticket.length && ticket.length ? totalCount - ticket[0].count : totalCount}</h5>
             </div>
           </div> : null}
           </>

@@ -1,7 +1,7 @@
 export type TypeCategory = string[]
 
 export type TypeCartItems = {
-  id:number
+  id:any
   name:string
   images:string
   description:string
@@ -33,6 +33,23 @@ export type TypeCartPizzasList = {
   pizzas:TypeCartItems[]
 }
 
+export type TypeTicketItems = {
+  count:number,
+  id:number,
+  sum:number,
+  title:string
+}
+
+export type TypeTicketList = {
+  ticket:TypeTicketItems[]
+}
+
+export type TypeRegisterForm = {
+  username:string
+  password:string
+  email:string
+}
+
 export type TypeCartList = {
   cart:TypeCartItems[]
   isLoaded:boolean
@@ -42,6 +59,8 @@ export type TypeModalCart = {
   modal:boolean
   setModal: (modal:boolean) => void
   cart:TypeCartItems[]
+  ticket:TypeTicketItems[]
+  onClickTicketItems: (ticket:[]) => void
 }
 
 export type TypeCategoryBtn = {
@@ -154,4 +173,9 @@ export type TypeHalvesList = {
 
 export type TypeHalvesPizzasList = {
   halves:TypeHalvesItems[]
+}
+
+export type TypeFormAuth = {
+  email:string
+  password:string
 }

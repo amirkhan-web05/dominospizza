@@ -34,3 +34,4 @@ export const fetchHalves = ():TypeThunkAction => async (dispatch:DispatchType) =
     alert(e)
   }
 }
+

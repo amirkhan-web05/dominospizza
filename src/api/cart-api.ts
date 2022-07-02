@@ -11,7 +11,12 @@ export const cartAPI = {
   deleteCart(id:number) {
     return instance.delete<number>(`/cart/${id}`)
   },
-  patchCart(id:number, count:number) {
+  patchPlusCart(id:number, count:number) {
+    return instance.patch<number>(`/cart/${id}`, {
+      count
+    })
+  },
+  patchMinusCart(id:number, count:number) {
     return instance.patch<number>(`/cart/${id}`, {
       count
     })

@@ -1,4 +1,4 @@
-import { TypeCategoryBtn, TypeAuthUser, TypeCitiesModal, TypeHalvesItems, TypeAuthMaterial, TypeParams } from './../../types/index';
+import { TypeCategoryBtn, TypeAuthUser, TypeCitiesModal, TypeHalvesItems, TypeAuthMaterial, TypeParams, TypeSnackItems } from './../../types/index';
 import { TypeCartItems } from "../../types";
 import { Types } from "../types";
 import { TypeSort } from '../../api/items-api';
@@ -10,6 +10,7 @@ export const actions = {
   setCart:(cart:TypeCartItems[]) => ({type:Types.APP_CART, cart} as const),
   setHalvesItems:(id:number) => ({type:Types.APP_HALVES_ITEMS, id} as const),
   setFilters:(filters:TypeParams) => ({type:Types.APP_FILTERS, filters} as const),
+  setSnacks:(snacks:TypeSnackItems[]) => ({type:Types.APP_SNACK, snacks} as const),
   setHalves:(halves:TypeHalvesItems[]) => ({type:Types.APP_HALVES, halves} as const),
   setCheckedPlusCart: (id:number) => ({type:Types.APP_PLUS_CHECK_CART, id} as const),
   setMinusCart:(id:number, count:number) => ({type:Types.APP_MINUS_CART, id, count} as const),

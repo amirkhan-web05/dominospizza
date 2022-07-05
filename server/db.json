@@ -10,9 +10,10 @@
       "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/JULIEN/NULL/NULL/RU",
       "description": "Грибы, Курица, Лук, Сыр Моцарелла, Соус сметанный с грибами",
       "price": 499,
+      "x2": true,
       "plusChecked": false,
       "category": "Вегетерианская",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         499,
@@ -31,7 +32,7 @@
       "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
       "price": 499,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "category": "Острая",
       "typePrices": [
@@ -51,7 +52,7 @@
       "description": "Свежие томаты, Сыр Моцарелла, Томатный соус , Сосиски",
       "price": 359,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "category": "С грибами",
       "typePrices": [
@@ -71,7 +72,7 @@
       "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соус , Соус Сладкий Чили",
       "price": 499,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "category": "Вегетерианская",
       "typePrices": [
@@ -92,7 +93,7 @@
       "price": 789,
       "plusChecked": false,
       "category": "Острая",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         789,
@@ -110,7 +111,7 @@
       "description": "Ветчина, Сыр Моцарелла, Томатный соус",
       "price": 289,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "category": "Без лука",
       "count": 1,
       "typePrices": [
@@ -130,7 +131,7 @@
       "description": "Огурцы маринованные, Пепперони, Сыр Моцарелла, Томатный соус",
       "price": 289,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "category": "Вегетерианская",
       "count": 1,
       "typePrices": [
@@ -150,7 +151,7 @@
       "description": "Пепперони, Сыр Моцарелла, Томатный соус",
       "price": 429,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "category": "Острая",
       "typePrices": [
@@ -171,7 +172,7 @@
       "price": 639,
       "plusChecked": false,
       "category": "Без лука",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "hit": "popular",
       "typePrices": [
@@ -192,7 +193,7 @@
       "price": 359,
       "plusChecked": false,
       "category": "Вегетерианская",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         359,
@@ -211,7 +212,7 @@
       "description": "Ананас, Ветчина, Сыр Моцарелла, Томатный соус",
       "price": 359,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "category": "Вегетерианская",
       "count": 1,
       "typePrices": [
@@ -231,7 +232,7 @@
       "description": "Соус Карбонара, Сыр Чеддер (тёртый), Сыр Моцарелла, Сыр Роккфорти, Чесночный соус с сыром Пармезан",
       "price": 639,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "category": "Без лука",
       "count": 1,
       "hit": "popular",
@@ -252,7 +253,7 @@
       "description": "Грибы, Маслины, Свежие томаты, Сыр Моцарелла, Сыр Фета, Томатный соус",
       "price": 499,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "category": "Без лука",
       "count": 1,
       "typePrices": [
@@ -272,7 +273,7 @@
       "description": "Грибы, Курица, Лук, Соус BBQ, Сыр Моцарелла, Томатный соус",
       "price": 429,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "category": "С грибами",
       "hit": "popular",
@@ -294,7 +295,7 @@
       "price": 499,
       "plusChecked": false,
       "category": "Без лука",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         499,
@@ -314,7 +315,7 @@
       "price": 289,
       "category": "Вегетерианская",
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         289,
@@ -334,7 +335,7 @@
       "price": 499,
       "plusChecked": false,
       "category": "С грибами",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         499,
@@ -354,7 +355,7 @@
       "price": 499,
       "category": "С грибами",
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         499,
@@ -374,7 +375,7 @@
       "price": 709,
       "plusChecked": false,
       "category": "Вегетерианская",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "hit": "popular",
       "typePrices": [
@@ -394,7 +395,7 @@
       "description": "Лук, Огурцы маринованные, Охотничьи колбаски, Сыр Моцарелла, Томатный соус",
       "price": 569,
       "plusChecked": false,
-      "completed": false,
+      "completed": true,
       "category": "Мясная",
       "count": 1,
       "typePrices": [
@@ -415,7 +416,7 @@
       "price": 569,
       "plusChecked": false,
       "category": "Острая",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         569,
@@ -435,7 +436,7 @@
       "price": 639,
       "plusChecked": false,
       "category": "Мясная",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         639,
@@ -455,7 +456,7 @@
       "price": 569,
       "plusChecked": false,
       "category": "Мясная",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         569,
@@ -475,7 +476,7 @@
       "price": 569,
       "plusChecked": false,
       "category": "С Мясная",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         569,
@@ -495,7 +496,7 @@
       "price": 569,
       "plusChecked": false,
       "category": "Мясная",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         569,
@@ -515,7 +516,7 @@
       "price": 709,
       "plusChecked": false,
       "category": "Вегетерианская",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         709,
@@ -535,7 +536,7 @@
       "price": 429,
       "plusChecked": false,
       "category": "С грибами",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         429,
@@ -555,7 +556,7 @@
       "price": 429,
       "plusChecked": false,
       "category": "С грибами",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         429,
@@ -575,7 +576,7 @@
       "price": 429,
       "plusChecked": false,
       "category": "С грибами",
-      "completed": false,
+      "completed": true,
       "count": 1,
       "typePrices": [
         429,
@@ -584,9 +585,193 @@
       ]
     }
   ],
-  "cart": [],
+  "snacks": [
+    {
+      "id": 1,
+      "name": "Сэндвич из печи Жюльен",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWZHUL1P/NULL/NULL/RU",
+      "description": "Нежное сочетание курочки, грибов и сметанного соуса с сыром моцарелла.",
+      "price": 199,
+      "typePrices": [
+        199
+      ],
+      "completed": false,
+      "count": 1
+    },
+    {
+      "id": 2,
+      "name": "Сэндвич из печи Чикен BBQ",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWCBBQ1P/NULL/NULL/RU",
+      "description": "Легендарное сочетание курицы, грибов, лука и соуса BBQ!",
+      "price": 199,
+      "completed": false,
+      "typePrices": [
+        199
+      ],
+      "count": 1
+    },
+    {
+      "id": 3,
+      "name": "Сэндвич из печи мясной",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWMEAT1P/NULL/NULL/RU",
+      "description": "Колбаски Пепперони, нежная ветчина, огурцы, лук и много сыра! Для тех, кто любит сытные перекусы.",
+      "price": 199,
+      "completed": false,
+      "typePrices": [
+        199
+      ],
+      "count": 1
+    },
+    {
+      "id": 4,
+      "name": "Ланч из печи с картофелем по-баварски",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/LKBAVA1P/NULL/NULL/RU",
+      "description": "Сытный обед с картофелем по-деревенски, охотничьими колбасками, огурчиками и сыром",
+      "price": 259,
+      "completed": false,
+      "typePrices": [
+        259
+      ],
+      "count": 1
+    },
+    {
+      "id": 5,
+      "name": "Ланч из печи с картофелем и курицей",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/LKAKYR1P/NULL/NULL/RU",
+      "description": "Горячий обед с картофелем по-деревенски, курочкой, помидорами и с сыром Моцарелла.",
+      "price": 259,
+      "completed": false,
+      "typePrices": [
+        259
+      ],
+      "count": 1
+    },
+    {
+      "id": 6,
+      "name": "Сосиска в тесте",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SOSTESST/NULL/NULL/RU",
+      "description": "Сочная сосиска в тесте с томатным соусом и сыром моцарелла из печи для вкусного перекуса",
+      "price": 99,
+      "completed": false,
+      "typePrices": [
+        99
+      ],
+      "count": 1
+    },
+    {
+      "id": 7,
+      "name": "Сэндвич-ролл Жюльен",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/JUROLLST/NULL/NULL/RU",
+      "description": "Лепешка пшеничная, Соус Сметанный с грибами, Сыр Моцарелла, Грибы резаные, Курица",
+      "price": 179,
+      "completed": false,
+      "typePrices": [
+        179
+      ],
+      "count": 1
+    },
+    {
+      "id": 8,
+      "name": "Сэндвич-ролл Куриный",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWZHUL1P/NULL/NULL/RU",
+      "description": "Нежное куриное филе, томаты, сыр Моцарелла под соусом Пикант в хрустящей тортилье.",
+      "price": 179,
+      "completed": false,
+      "typePrices": [
+        179
+      ],
+      "count": 1
+    },
+    {
+      "id": 9,
+      "name": "Сэндвич-ролл Ветчина и грибы",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/HMSHROLL/NULL/NULL/RU",
+      "description": "Умопомрачительное сочетание ветчины и грибов под соусом карбонара в тортилье.",
+      "price": 179,
+      "completed": false,
+      "typePrices": [
+        179
+      ],
+      "count": 1
+    },
+    {
+      "id": 10,
+      "name": "Фирменный картофель из печи",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/KARPECML/NULL/NULL/RU",
+      "description": "Порция 95 г. Фирменный картофель из печи",
+      "price": 189,
+      "completed": false,
+      "typePrices": [
+        189
+      ],
+      "count": 1
+    },
+    {
+      "id": 11,
+      "name": "Картофель по-деревенcки",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/KARMAL/NULL/NULL/RU",
+      "description": "Порция 100 г. Сочные дольки молодого картофеля со специями, запеченные в печи.",
+      "price": 189,
+      "completed": false,
+      "typePrices": [
+        189
+      ],
+      "count": 1
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": "Сэндвич из печи Жюльен",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWZHUL1P/NULL/NULL/RU",
+      "price": 199,
+      "typePrices": 199,
+      "description": "Нежное сочетание курочки, грибов и сметанного соуса с сыром моцарелла.",
+      "count": 1
+    },
+    {
+      "id": 4,
+      "name": "Хот-дог",
+      "price": 499,
+      "count": 1,
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
+      "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
+      "plusChecked": false,
+      "completed": true,
+      "categoryPrice": 499,
+      "typePrices": 499
+    },
+    {
+      "id": 16,
+      "name": "Сырная с ветчиной",
+      "price": 289,
+      "count": 1,
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CHHM/NULL/NULL/RU",
+      "description": "Ветчина, Сыр Моцарелла, Томатный соус",
+      "plusChecked": false,
+      "completed": true,
+      "categoryPrice": 289,
+      "typePrices": 289
+    },
+    {
+      "id": 8,
+      "name": "Сэндвич-ролл Куриный",
+      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWZHUL1P/NULL/NULL/RU",
+      "price": 179,
+      "typePrices": 179,
+      "description": "Нежное куриное филе, томаты, сыр Моцарелла под соусом Пикант в хрустящей тортилье.",
+      "count": 1
+    }
+  ],
   "users": [],
-  "tickets": [],
+  "tickets": [
+    {
+      "id": 1,
+      "title": "JS",
+      "count": 40,
+      "sum": 5
+    }
+  ],
   "halves": [
     {
       "id": 1,

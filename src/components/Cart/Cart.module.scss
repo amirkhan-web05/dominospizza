@@ -7,7 +7,8 @@
   top: 100%;
   border-radius: 10px;
   right: 0;
-  overflow: auto;
+  overflow-y: scroll;
+  height: 375px;
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
 

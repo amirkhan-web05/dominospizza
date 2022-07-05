@@ -1,0 +1,82 @@
+.payment__inner {
+    margin-top: 2em;
+}
+
+.payment__contact {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 0px;
+
+    &-text {
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: rgb(62, 73, 89);
+    }
+}
+
+.payment__input:first-child {
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.payment__input {
+    font-size: 18px;
+    padding: 0px;
+    width: 100%;
+    height: 45px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    color: rgb(80, 80, 97);
+    background-color: transparent;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    outline: none !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(220, 220, 223);
+        z-index: 1;
+    }
+}
+
+.payment__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 1;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: auto;
+    padding: 8px 20px 6px;
+    font-size: 16px;
+    background-color: rgb(230, 18, 52);
+    border: 2px solid transparent;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+.payment__other {
+    font-size: 18px;
+    color: rgb(106, 106, 119);
+    margin-left: 15px;
+}
+
+.address {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2em;
+}

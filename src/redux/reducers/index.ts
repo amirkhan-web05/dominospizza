@@ -1,3 +1,4 @@
+import { snacks } from './reducer-snacks';
 import { halves } from './reducer-halves';
 import { cities } from './reducer-cities';
 import { register } from './reducer-register';
@@ -15,4 +16,5 @@ export const rootReducers = combineReducers({
   cities,
   register,
   halves,
+  snacks
 })

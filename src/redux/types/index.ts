@@ -5,6 +5,7 @@ import { actions } from './../actions/action-creators';
 
 export enum Types {
   APP_PIZZAS = 'APP/PIZZAS',
+  APP_SNACK = 'APP/SNACK',
   APP_CART = 'APP/CART',
   APP_ADD_TO_CART = 'APP/ADD/TO/CART',
   APP_REMOVE_CART = 'APP/REMOVE/CART',
@@ -23,7 +24,7 @@ export enum Types {
   APP_HALVES = 'APP/HALVES',
   APP_HALVES_ITEMS = 'APP/HALVES/ITEMS',
   APP_FILTERS = 'APP/FILTERS',
-  APP_MINUS_CART = 'APP/MINUS/PATCH'
+  APP_MINUS_CART = 'APP/MINUS/PATCH',
 }
 
 type InferValueTypes<T> = T extends {[key:string]:infer U} ? U : never

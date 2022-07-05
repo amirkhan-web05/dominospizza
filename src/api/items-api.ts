@@ -1,4 +1,4 @@
-import { TypeCategoryBtn, TypeHalvesItems, TypeCitiesModal } from './../types/index';
+import { TypeCategoryBtn, TypeHalvesItems, TypeCitiesModal, TypeSnackItems } from './../types/index';
 import { instance } from './api';
 import { TypeCartItems } from "../types"
 
@@ -17,5 +17,8 @@ export const itemsAPI = {
   },
   getHalves() {
     return instance.get<TypeHalvesItems[]>('/halves')
+  },
+  getSnacks() {
+    return instance.get<TypeSnackItems[]>('/snacks')
   }
 }

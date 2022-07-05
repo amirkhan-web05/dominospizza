@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import { TypeCartItems, TypeCartItemsList, TypeSortItems } from '../../types'
+import { TypeCartItems, TypeCartItemsList, TypeSortItems } from '../../../types/index'
 import { CartItems } from '../CartItems/CartItems'
-import { FiltersItems } from '../FiltersItems/FiltersItems'
-import { TakeItems } from '../TakeItems/TakeItems'
+import { FiltersItems } from '../../FiltersItems/FiltersItems'
+import { TakeItems } from '../../TakeItems/TakeItems'
 
-import pizzasHalves from '../../assets/images/pizzas/pizza-halves-desktop.jpg'
+import pizzasHalves from '../../../assets/images/pizzas/pizza-halves-desktop.jpg'
 
 import styles from './CartList.module.scss'
 import { Link } from 'react-router-dom'
-import { AUTH_PAGE } from '../../routes'
-import { useAppSelector } from '../../hooks'
-import { AuthUser } from '../AuthUser/AuthUser'
+import { AUTH_PAGE } from '../../../routes'
+import { useAppSelector } from '../../../hooks'
+import { AuthUser } from '../../AuthUser/AuthUser'
 
 export const sortByItems: TypeSortItems[] = [
   { type: 'price', name: 'По цене', order: 'asc' },

@@ -17,7 +17,7 @@ export const NavBar:React.FC = () => {
       </NavLink>
       <NavLink to='/' className={styles.nav__item}>Акции</NavLink>
       <NavLink to='/' className={styles.nav__item}>Пицца</NavLink>
-      <NavLink to='/' className={styles.nav__item}>Закуски</NavLink>
+      <NavLink to='/snacks' className={styles.nav__item}>Закуски</NavLink>
       <NavLink to='/' className={styles.nav__item}>ДЕСЕРТЫ</NavLink>
       <NavLink to='/' className={styles.nav__item}>НАПИТКИ</NavLink>
       <NavLink to='/' className={styles.nav__item}>СОУСЫ</NavLink>

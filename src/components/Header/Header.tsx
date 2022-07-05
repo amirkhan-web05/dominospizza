@@ -26,7 +26,6 @@ import { CSSTransition } from 'react-transition-group';
 import { NavBar } from '../NavBar/NavBar';
 import { AxiosResponse } from 'axios';
 import { apiTicket } from '../../api/ticket-api';
-import { actions } from '../../redux/actions/action-creators';
 
 const sliderImages = [
   {
@@ -64,15 +63,17 @@ export const Header: React.FC = () => {
     })
   }
 
+  useEffect(() => {
+    apiTicket.getTicket(valueTicket).then(({data}) => {
+      if (valueTicket.length) {
+        setTicket(data)
+      }
+    })
+  }, [])
+
   const refundTicket = () => {
     setTicket([])
   }
-
-  useEffect(() => {
-    apiTicket.getTicket(valueTicket).then(({data}) => {
-      setTicket(data)
-    })
-  }, [])
 
   const [modal, setModal] = useState(false)
   const [popup, setPopup] = useState(false)

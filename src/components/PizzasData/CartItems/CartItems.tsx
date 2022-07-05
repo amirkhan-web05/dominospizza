@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { TypeCartItems } from '../../types'
-import checkBox from '../../assets/images/other/free-icon-checkbox-7079911.png'
+import { TypeCartItems } from '../../../types'
+import checkBox from '../../../assets/images/other/free-icon-checkbox-7079911.png'
 
 import styles from './CartItems.module.scss'
-import { useAppSelector } from '../../hooks'
+import { useAppSelector } from '../../../hooks'
 
 const categoryBtn = ['20 см', '28 см', '33 см']
 
-export const CartItems:React.FC<TypeCartItems> = ({id, name, price, plusChecked, setPlusChecked, typePrices, count, images, description, onAdd}) => {
+export const CartItems:React.FC<TypeCartItems> = ({id, name, price, completed, plusChecked, setPlusChecked, typePrices, count, images, description, onAdd}) => {
   const isLoaded = useAppSelector(state => state.cart.isLoaded)
   const [activeItem, setActiveItem] = useState(0)
   const typePrice = typePrices[activeItem] + 59
@@ -22,6 +22,7 @@ export const CartItems:React.FC<TypeCartItems> = ({id, name, price, plusChecked,
           images, 
           description, 
           plusChecked, 
+          completed,
           categoryPrice:
           plusChecked ? typePrice : price, 
           setPlusChecked, 

@@ -1,13 +1,15 @@
+import { SnackPages } from './../pages/SnackPages/SnackPages';
 import { NotFoundPage } from './../pages/NotFoundPage';
 import { HalvesSection } from '../components/HalvesSection/HalvesSection';
 import { HomePage } from './../pages/HomePage';
-import { PaymentPage } from '../pages/PaymentPage';
+import { PaymentPage } from '../pages/PaymenPage/PaymentPage';
 
 export const HOME_PAGE = '/'
 export const AUTH_PAGE = '/halves'
 export const REGISTER_ROUTE = '/register'
 export const NOT_FOUND_ROUTE = '*'
 export const PAYMENT_ROUTE = '/payment'
+export const SNACK_PAGE = '/snacks'
 
 export const PUBLIC_ROUTE = [
   {
@@ -25,6 +27,10 @@ export const PUBLIC_ROUTE = [
   {
     path:PAYMENT_ROUTE,
     Element:PaymentPage
+  },
+  {
+    path:SNACK_PAGE,
+    Element:SnackPages
   }
 ]
 

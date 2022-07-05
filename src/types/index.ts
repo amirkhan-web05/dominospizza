@@ -6,13 +6,14 @@ export type TypeCartItems = {
   images:string
   description:string
   category?:string
-  categoryPrice:number
+  categoryPrice?:number
   price:number
+  completed?:boolean,
   count:number
   isLoaded?:boolean
   setIsLoaded?:() => void
-  plusChecked:boolean,
-  typePrices:any
+  plusChecked?:boolean,
+  typePrices?:any
   setPlusChecked?: (id:number) => void
   onAdd?: (items:TypeCartItems) => void;
 }
@@ -60,7 +61,7 @@ export type TypeModalCart = {
   setModal: (modal:boolean) => void
   cart:TypeCartItems[]
   ticket:TypeTicketItems[]
-  onClickTicketItems: (ticket:[]) => void
+  onClickTicketItems: ([]) => void
 }
 
 export type TypeCategoryBtn = {
@@ -178,4 +179,21 @@ export type TypeHalvesPizzasList = {
 export type TypeFormAuth = {
   email:string
   password:string
+}
+
+export type TypeSnackItems = {
+  id:number
+  name:string
+  typePrices?:any
+  images:string
+  completed?:boolean
+  count:number
+  description:string
+  price:number
+  onClickAdd?: (items:TypeSnackItems) => void
+}
+
+export type TypeSnackList = {
+  snacks:TypeSnackItems[]
+  onClickAdd?: (items:TypeSnackItems) => void
 }

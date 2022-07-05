@@ -21,7 +21,7 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart, ticket, onC
       return acc += item.typePrices && item.count * item.typePrices + typePrice
     } else {
       return acc += item.typePrices && item.count * item.typePrices
-    }
+    } 
   }, 0)
 
   const removeCart = (id:number) => {
@@ -59,11 +59,11 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart, ticket, onC
                       <h4 className={styles.cart__name}>{item.name}</h4>
                       <p className={styles.cart__subname}>Тонкое, {item.category}</p>
                     </div>
-                    <TypeCart
+                    {item.completed ? <TypeCart
                       id={item.id}
                       setPlusCheck={toggleCheckPlus}
                       plusCheck={item.plusChecked} 
-                    />
+                    /> : null}
                   </div>
                 </div>
                 <div className={styles['cart__info-border']}>
@@ -81,7 +81,7 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart, ticket, onC
                         <button onClick={() => plusCart(item.id, item.count)} className={styles['cart__meter-btn']}>+</button>
                       </div>
                     </div>
-                    <h5>{item.plusChecked ? item.typePrices * item.count + typePrice : item.typePrices * item.count} ₽ </h5>
+                    <h5>{item.plusChecked ? item.typePrices * item.count + typePrice : item.typePrices * item.count ? item.price : item.price} ₽ </h5>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart, ticket, onC
             {cart.length ? <div className={styles.cart__total}>
             <div onClick={() => onClickTicketItems([])} className={styles.cart__buy}>
               <Link onClick={() => setModal(false)} style={{textDecoration:'none', color:'#fff'}} to={PAYMENT_ROUTE}>Оформить</Link>
-              <h5>{ticket.length && ticket.length ? totalCount - ticket[0].count : totalCount}</h5>
+              <h5>{ticket.length ? totalCount - ticket[0].count : totalCount}</h5>
             </div>
           </div> : null}
           </>

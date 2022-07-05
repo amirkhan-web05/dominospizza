@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import { TypeCategoryBtn, TypeCartItems, TypeCitiesModal, TypeHalvesItems } from './../../types/index';
+import { TypeCategoryBtn, TypeCartItems, TypeCitiesModal, TypeHalvesItems, TypeSnackItems } from './../../types/index';
 import { TypeSort } from './../../api/items-api';
 import { actions } from './action-creators';
 import { DispatchType, TypeThunkAction } from './../types/index';
@@ -35,3 +35,12 @@ export const fetchHalves = ():TypeThunkAction => async (dispatch:DispatchType) =
   }
 }
 
+export const fetchSnacks = ():TypeThunkAction => async (dispatch:DispatchType) => {
+  try {
+    await itemsAPI.getSnacks().then(({data}:AxiosResponse<TypeSnackItems[]>) => {
+      dispatch(actions.setSnacks(data))
+    })
+  } catch (e) {
+    alert(e)
+  }
+}

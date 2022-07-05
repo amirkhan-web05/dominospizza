@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import qs from 'qs'
-import { CartList } from '../components/CartList/CartList'
+import { CartList } from '../components/PizzasData/CartList/CartList'
 import { useAppDispatch, useAppSelector } from '../hooks'
 import { fetchAuth } from '../redux/actions/action-auth'
 import { fetchPlusCart, fetchPostCart } from '../redux/actions/action-cart'
@@ -21,11 +21,7 @@ export const HomePage:React.FC = () => {
   const sortBy = useAppSelector(state => state.filters.sortBy)
   const categoryBtn = useAppSelector(state => state.filters.categoryBtn)
 
-  console.log(cart)
-
   const onAddHandlerCart = (obj:TypeCartItems):void => {
-
-    // Если id === typId не совпадают, то добавляет))
     const findItems = cart.find(item => item.id === obj.id) 
     console.log(findItems)
 

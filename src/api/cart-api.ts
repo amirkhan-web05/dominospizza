@@ -20,5 +20,9 @@ export const cartAPI = {
     return instance.patch<number>(`/cart/${id}`, {
       count
     })
+  },
+
+  deleteClear() {
+    return instance.post<any>('/cart')
   }
 }

@@ -4,25 +4,19 @@ import { useAppDispatch } from '../../hooks'
 import { fetchDeleteCart, fetchMinusCart, fetchPlusCart } from '../../redux/actions/action-cart'
 import { actions } from '../../redux/actions/action-creators'
 import { PAYMENT_ROUTE } from '../../routes'
-import { TypeCartItems, TypeModalCart } from '../../types'
+import { TypeModalCart } from '../../types'
+import { useTotal } from '../../utils/useTotal'
 import { TypeCart } from '../TypeCart/TypeCart'
 import styles from './Cart.module.scss'
 
 export const Cart:React.FC<TypeModalCart> = ({modal, setModal, cart, ticket, onClickTicketItems}) => {
   const dispatch = useAppDispatch()
-  const typePrice = 59
+  const typePrice = 15
+  const {totalCount} = useTotal(cart)
 
   const toggleCheckPlus = (id:number) => {
     dispatch(actions.setCheckedPlusCart(id))    
   }
-
-  const totalCount = cart.reduce((acc:number, item:TypeCartItems) => {
-    if(item.plusChecked) {
-      return acc += item.typePrices && item.count * item.typePrices + typePrice
-    } else {
-      return acc += item.typePrices && item.count * item.typePrices
-    } 
-  }, 0)
 
   const removeCart = (id:number) => {
     dispatch(fetchDeleteCart(id))

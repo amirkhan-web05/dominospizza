@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import qs from 'qs'
 import { CartList } from '../components/PizzasData/CartList/CartList'
 import { useAppDispatch, useAppSelector } from '../hooks'
@@ -74,17 +74,17 @@ export const HomePage:React.FC = () => {
     dispatch(fetchAuth())
   }, [])
 
-  const onClickCategoryBtn = (items:TypeCategoryBtn):void => {
+  const onClickCategoryBtn = useCallback((items:TypeCategoryBtn) => {
     dispatch(actions.setCategoryBtn(items))
-  }
+  }, [])
 
   const changeActivePriceHandler = (id:number) => {
     dispatch(actions.setCheckedPlusPizzas(id))
   }
 
-  const handlerSortBy = (items:TypeSortItems) => {
+  const handlerSortBy = useCallback((items:TypeSortItems) => {
     dispatch(actions.setSortBy(items))
-  }
+  }, [])
 
   return (
     <>

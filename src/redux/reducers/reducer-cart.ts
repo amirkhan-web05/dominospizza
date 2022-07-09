@@ -67,6 +67,10 @@ export const cart = (state:TypeInitialState = initialState, action:TypeData):Typ
     case Types.APP_LOADED: {
       return {...state, isLoaded:action.payload}
     }
+
+    case Types.APP_CLEAR_CART: {
+      return {...state, cart:[]}
+    }
     
     default:
       return state

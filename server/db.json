@@ -722,45 +722,15 @@
   "cart": [
     {
       "id": 1,
-      "name": "Сэндвич из печи Жюльен",
-      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWZHUL1P/NULL/NULL/RU",
-      "price": 199,
-      "typePrices": 199,
-      "description": "Нежное сочетание курочки, грибов и сметанного соуса с сыром моцарелла.",
-      "count": 1
-    },
-    {
-      "id": 4,
-      "name": "Хот-дог",
+      "name": "Жюльен",
       "price": 499,
       "count": 1,
-      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/HOTDOG/NULL/NULL/RU",
-      "description": "Огурцы маринованные, Сыр Моцарелла, Соус Пикант, Лук жареный, Сосиски",
+      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/JULIEN/NULL/NULL/RU",
+      "description": "Грибы, Курица, Лук, Сыр Моцарелла, Соус сметанный с грибами",
       "plusChecked": false,
       "completed": true,
       "categoryPrice": 499,
       "typePrices": 499
-    },
-    {
-      "id": 16,
-      "name": "Сырная с ветчиной",
-      "price": 289,
-      "count": 1,
-      "images": "https://dpru.azureedge.net/static.dominospizza.ru/api/medium/ProductOsg/Web/CHHM/NULL/NULL/RU",
-      "description": "Ветчина, Сыр Моцарелла, Томатный соус",
-      "plusChecked": false,
-      "completed": true,
-      "categoryPrice": 289,
-      "typePrices": 289
-    },
-    {
-      "id": 8,
-      "name": "Сэндвич-ролл Куриный",
-      "images": "https://staticy.dominospizza.ru/api/medium/Product/Global/SWZHUL1P/NULL/NULL/RU",
-      "price": 179,
-      "typePrices": 179,
-      "description": "Нежное куриное филе, томаты, сыр Моцарелла под соусом Пикант в хрустящей тортилье.",
-      "count": 1
     }
   ],
   "users": [],
@@ -814,7 +784,32 @@
       ]
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "name": "",
+      "phone": "",
+      "email": "",
+      "street": "",
+      "home": "",
+      "apartment": "",
+      "driveway": "",
+      "story": "",
+      "intercomCode": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "phone": "",
+      "email": "",
+      "street": "",
+      "home": "",
+      "apartment": "",
+      "driveway": "",
+      "story": "",
+      "intercomCode": "",
+      "id": 2
+    }
+  ],
   "cities": [
     {
       "coords": {

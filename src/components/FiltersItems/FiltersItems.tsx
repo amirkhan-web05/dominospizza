@@ -1,9 +1,12 @@
-import React from 'react'
+import { useWhyDidYouUpdate } from 'ahooks'
+import React, { memo } from 'react'
 import { TypeCategoryList, TypeSortBy } from '../../types'
 
 import styles from './FiltersItems.module.scss'
 
-export const FiltersItems:React.FC<TypeSortBy & TypeCategoryList> = ({items, onClickSortBy, activeSortType, categoryBtn, onClickCategory, activeCategory}) => {    
+export const FiltersItems:React.FC<TypeSortBy & TypeCategoryList> = memo(({items, onClickSortBy, activeSortType, categoryBtn, onClickCategory, activeCategory}) => {   
+  useWhyDidYouUpdate('', {items, onClickSortBy, activeSortType, categoryBtn, onClickCategory, activeCategory})
+
   return (
     <div className={styles.filters}>
       <div className='d-flex'>
@@ -30,4 +33,4 @@ export const FiltersItems:React.FC<TypeSortBy & TypeCategoryList> = ({items, onC
       </div>
     </div>
   )
-}
+})

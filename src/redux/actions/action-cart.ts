@@ -70,3 +70,8 @@ export const fetchMinusCart = (id:number, count:number):TypeThunkAction => {
   }
 }
 
+export const fetchClearCart = ():TypeThunkAction => (dispatch) => {
+  cartAPI.deleteClear().then(() => {
+    dispatch(actions.setClear())
+  })
+}

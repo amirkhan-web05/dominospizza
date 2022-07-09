@@ -197,3 +197,19 @@ export type TypeSnackList = {
   snacks:TypeSnackItems[]
   onClickAdd?: (items:TypeSnackItems) => void
 }
+
+export type TypeOrders = {
+  name:string,
+  phone:string,
+  email:string,
+  street:string,
+  home:string,
+  apartment:string,
+  driveway:string,
+  story:string,
+  intercomCode:string
+}
+
+export type TypeOrdersList = {
+  orders:TypeOrders[]
+}

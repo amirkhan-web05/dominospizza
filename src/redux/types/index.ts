@@ -25,6 +25,8 @@ export enum Types {
   APP_HALVES_ITEMS = 'APP/HALVES/ITEMS',
   APP_FILTERS = 'APP/FILTERS',
   APP_MINUS_CART = 'APP/MINUS/PATCH',
+  APP_ORDERS = 'APP/ORDERS',
+  APP_CLEAR_CART = 'APP/CLEAR/CART'
 }
 
 type InferValueTypes<T> = T extends {[key:string]:infer U} ? U : never

@@ -1,80 +1,64 @@
-import { loadStripe } from '@stripe/stripe-js'
-import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
-import React, { useState } from 'react'
+import React from 'react'
+import { useAppDispatch, useAppSelector } from '../../hooks'
+import { fetchOrders } from '../../redux/actions/action-orders'
+import { useTotal } from '../../utils/useTotal'
 import styles from './PaymentPage.module.scss'
+import { PaymentValidate } from './paymentValidate/PaymentValidate'
 
-const stripPromise = loadStripe('pk_test_51JTrV6HFoKUaoW0tHv5bNwAi1U2OuNYEbN7gpFdSMvIWx9ElHOtsx7EcslJOZrhDNkxHzuqL8FX16WrQ4QL3OjGy00ei4b2lLa')
+export const PaymentPage: React.FC = () => {
+    const dispatch = useAppDispatch()
+    const cart = useAppSelector(state => state.cart.cart)
+    const {totalCount} = useTotal(cart)
+    const {
+        payment, 
+        setPayment, 
+        validateEmail,
+        validateName,
+        validateHome,
+        validateApartment,
+        validatePhone,
+        validateStreet,
+        validateDriveway,
+        validateStory,
+        validateIntercomCode,
+        formValid, 
+        formDirty, 
+        formError, 
+        blurHandler
+    } = PaymentValidate()
 
-export const PaymentPage: React.FC<any> = ({checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout}) => {
-    const [order, setOrder] = useState({});
-    
-    const handleSubmit = async (event:any, elements:any, stripe:any) => {
-        event.preventDefault()
-        if (!stripe || !elements) {
-            return;
-        }
 
-        const cardElement = elements.getElement(CardElement)
-
-        const {error, paymentMethod} = await stripe.createPaymentMethod({type:'card', card:cardElement})
-
-        if (error) {
-            console.log(error)
-        } else {
-            const orderData = {
-                line_items:checkoutToken.live.line_items,
-                customer:{firstName:shippingData.fristName, lastname:shippingData.lastName, email:shippingData.email},
-                shopping: {
-                    name:'Primary', 
-                    street:shippingData.addres1, 
-                    town_city:shippingData.city,
-                    county:shippingData.shippingSubvision, 
-                    postal_zip_code:shippingData.zip, 
-                    country:shippingData.shippingCountry
-                },
-                fulfillment:{shipping_methid:shippingData.shippingOption},
-                paymnet: {
-                    gateway:'stripe',
-                    stripe: {
-                        payment_method_id:paymentMethod.id
-                    }
-                }
-            }
-
-            onCaptureCheckout(checkoutToken.id, orderData);
-
-            nextStep();
-        }
+    const handlerSubmit = (e:React.ChangeEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        dispatch(fetchOrders(payment))
     }
-    
+
     return (
         <div>
-            <div className="container">
+            <form onSubmit={handlerSubmit} className="container">
                 <div className={styles.payment__inner}>
                     <div className={styles.payment__contact}>
                         <h5 className={styles['payment__contact-text']}>Контакты</h5>
-                        <Elements stripe={stripPromise}>
-                            <ElementsConsumer>{({elements, stripe}) => (
-                                <form onSubmit={e => handleSubmit(e, elements, stripe)}>
-                                    <div className='d-flex align-items-center mt-3'>
-                                        <button className={styles.payment__btn}>Войти</button>
-                                        <span className={styles.payment__other}>или заполнить форму ниже</span>
+                            <div>
+                                <div className='d-flex align-items-center mt-3'>
+                                    <button className={styles.payment__btn}>Войти</button>
+                                    <span className={styles.payment__other}>или заполнить форму ниже</span>
+                                </div>
+                                <div className='w-100 mt-3 d-flex justify-content-between'>
+                                    <div style={{width:"100%", maxWidth:300}}>
+                                        <input value={payment.name} onBlur={e => blurHandler(e)} name='name' onChange={validateName} placeholder='Имя' className={styles.payment__input} type="text" />
+                                        {formError.name && formDirty.nameDirty && <span>{formError.name}</span>}
                                     </div>
-                                    <div className='w-100 mt-3 d-flex justify-content-between'>
-                                        <div>
-                                            <input placeholder='Имя' className={styles.payment__input} type="text" />
-                                        </div>
-                                        <div>
-                                            <input placeholder='Телефон' className={styles.payment__input} type="text" />
-                                        </div>
-                                        <div>
-                                            <input placeholder='E-mail' className={styles.payment__input} type="text" />
-                                        </div>
+                                    <div style={{width:"100%", maxWidth:300}}>
+                                        <input value={payment.phone} onBlur={e => blurHandler(e)} name='phone' onChange={validatePhone} placeholder='Телефон' className={styles.payment__input} type="number" />
+                                        {formError.phone && formDirty.phoneDirty && <span>{formError.phone}</span>}
                                     </div>
-                                    </form>
-                                )}
-                            </ElementsConsumer>
-                        </Elements>
+                                    <div style={{width:"100%", maxWidth:300}}>
+                                        <input value={payment.email} onBlur={e => blurHandler(e)} name='email' onChange={validateEmail} placeholder='E-mail' className={styles.payment__input} type="text" />
+                                        {formError.email && formDirty.emailDirty && <span>{formError.email}</span>}
+                                    </div>
+                            </div>
+                        </div>                               
                     </div>
                 </div>
                 <div className={styles.address}>
@@ -83,31 +67,41 @@ export const PaymentPage: React.FC<any> = ({checkoutToken, nextStep, backStep, s
                         <div className={styles.address__content}>
                             <h4>Введите адрес или выберите дом</h4>
                             <div className="address__data">
-                                <div>
-                                    <input className={styles.payment__input} placeholder='Улица' type="text" />
+                                <div style={{width:"100%"}}>
+                                    <input value={payment.street} onBlur={e => blurHandler(e)} name='street' onChange={validateStreet} className={styles['payment__input-street']} placeholder='Улица' type="text" />
+                                    {formError.street && formDirty.streetDirty && <span className={styles['payment__content-error']}>{formError.street}</span>}
                                 </div>
                                 <div className='d-flex justify-content-between'>
-                                    <div>
-                                        <input className={styles.payment__input} placeholder='Дом' type="text" />
+                                    <div style={{width:"100%", maxWidth:200}}>
+                                        <input value={payment.home} onBlur={e => blurHandler(e)} name='home' onChange={validateHome} className={styles.payment__input} placeholder='Дом' type="text" />
+                                        {formError.home && formDirty.homeDirty && <span className={styles['payment__content-error']}>{formError.home}</span>}
                                     </div>
-                                    <div>
-                                        <input className={styles.payment__input} placeholder='Квартира' type="text" />
+                                    <div style={{width:"100%", maxWidth:200}}>
+                                        <input value={payment.apartment} onBlur={e => blurHandler(e)} name='apartment' onChange={validateApartment} className={styles.payment__input} placeholder='Квартира' type="text" />
+                                        {formError.apartment && formDirty.apartmentDirty && <span className={styles['payment__content-error']}>{formError.apartment}</span>}
                                     </div>
-                                    <div>
-                                        <input className={styles.payment__input} placeholder='Подъезд' type="text" />
+                                    <div style={{width:"100%", maxWidth:200}}>
+                                        <input value={payment.story} onBlur={e => blurHandler(e)} name='story' onChange={validateStory} className={styles.payment__input} placeholder='Этаж' type="text" />
+                                        {formError.story && formDirty.storyDirty && <span className={styles['payment__content-error']}>{formError.story}</span>}
                                     </div>
-                                    <div>
-                                        <input className={styles.payment__input} placeholder='Этаж' type="text" />
+                                    <div style={{width:"100%", maxWidth:200}}>
+                                        <input value={payment.driveway} onBlur={e => blurHandler(e)} name='driveway' onChange={validateDriveway} className={styles.payment__input} placeholder='Подъезд' type="text" />
+                                        {formError.driveway && formDirty.drivewayDirty && <span className={styles['payment__content-error']}>{formError.driveway}</span>}
                                     </div>
-                                    <div>
-                                        <input className={styles.payment__input} placeholder='Код домофона' type="text" />
+                                    <div style={{width:"100%", maxWidth:200}}>
+                                        <input value={payment.intercomCode} onBlur={e => blurHandler(e)} name='intercomCode' onChange={validateIntercomCode} className={styles.payment__input} placeholder='Код домофона' type="text" />
+                                        {formError.intercomCode && formDirty.intercomCodeDirty && <span className={styles['payment__content-error']}>{formError.intercomCode}</span>}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div className='d-flex align-items-center justify-content-between'>
+                    <button disabled={!formValid} type='submit' className={styles.payment__checkout}>Заказать</button>
+                    <h3>Итого: {totalCount} ₽</h3>
+                </div>
+            </form>
         </div>
     )
 }

@@ -1,17 +1,17 @@
 import React from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks'
-import { fetchOrders } from '../../redux/actions/action-orders'
+import { fetchOrders } from '../../redux/actions/orders/action-orders'
+import { selectCartData } from '../../redux/selectors/selectors'
 import { useTotal } from '../../utils/useTotal'
 import styles from './PaymentPage.module.scss'
 import { PaymentValidate } from './paymentValidate/PaymentValidate'
 
 export const PaymentPage: React.FC = () => {
     const dispatch = useAppDispatch()
-    const cart = useAppSelector(state => state.cart.cart)
+    const {cart} = useAppSelector(selectCartData)
     const {totalCount} = useTotal(cart)
     const {
         payment, 
-        setPayment, 
         validateEmail,
         validateName,
         validateHome,

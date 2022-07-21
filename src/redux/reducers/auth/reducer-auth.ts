@@ -1,8 +1,8 @@
-import { TypeAuth } from './../../types/index';
-import { TypeData, Types } from './../types/index';
+import { TypeAuth } from './../../../types/index';
+import { TypeData, Types } from './../../types/index';
 
 const initialState:TypeAuth = {
-  auth:null,
+  auth:JSON.parse(localStorage.getItem('accessToken') as any || null),
   loading:true,
   isAuth:false
 }
@@ -21,6 +21,10 @@ export const auth = (state:TypeInitialState = initialState, action:TypeData):Typ
 
     case Types.APP_AUTH_LOGOUT: {
       return {...state, auth:null}
+    }
+
+    case Types.APP_IN_LOGOUT: {
+      return {...state, auth:action.auth}
     }
     
     default:

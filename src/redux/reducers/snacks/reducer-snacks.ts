@@ -1,5 +1,5 @@
-import { TypeSnackList } from './../../types/index';
-import { TypeData, Types } from './../types/index';
+import { TypeSnackList } from './../../../types/index';
+import {TypeData, Types} from './../../types/index'
 
 const initialState:TypeSnackList = {
     snacks:[]

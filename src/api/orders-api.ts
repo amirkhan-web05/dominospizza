@@ -2,7 +2,7 @@ import { instance } from './api';
 import { TypeOrders } from './../types/index';
 
 export const ordersAPI = {
-  postOrders(orders:TypeOrders) {
-    return instance.post<TypeOrders>('/orders', orders)
+  postOrders(orders:TypeOrders | null) {
+    return instance.post<TypeOrders | null>('/orders', orders)
   }
 }

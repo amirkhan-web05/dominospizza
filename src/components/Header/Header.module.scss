@@ -34,7 +34,7 @@
       left: 0;
       padding: 17px 0;
       top: 60px;
-      z-index: 1000000;
+      z-index: 1000;
       transition: .1s all;
 
       &.sticky {
@@ -56,7 +56,7 @@
     height: 50px;
     padding-left: 16px;
     background-color: rgb(39, 39, 39);
-    color: rgb(255, 255, 255);
+    color: $white;
     font-size: 18px;
   }
 
@@ -66,7 +66,7 @@
     width: 48px;
     height: 48px;
     border-radius: 24px;
-    color: rgb(255, 255, 255);
+    color: $white;
     background-color: rgb(227, 24, 54);
     cursor: pointer;
     border: none;
@@ -98,7 +98,7 @@
     top: -5px;
     width: 24px;
     height: 24px;
-    background: rgb(255, 255, 255);
+    background: $white;
     border: 1px solid $access;
     color: $access;
     border-radius: 50%;
@@ -133,4 +133,8 @@
 .my-node-exit-active {
   opacity: 0;
   transition: opacity 200ms;
+}
+
+.arrow__image {
+  filter: invert(1);
 }

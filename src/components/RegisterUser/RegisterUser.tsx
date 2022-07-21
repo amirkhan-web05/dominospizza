@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useAppDispatch } from '../../hooks'
 
 import { HOME_PAGE, REGISTER_ROUTE } from '../../routes';
-import { fetchRegister } from '../../redux/actions/action-auth';
+import { fetchRegister } from '../../redux/actions/auth/action-auth';
 
 import styles from './Register.module.scss';
 import { NavLink } from 'react-router-dom';
@@ -15,7 +15,7 @@ export const RegisterUser:React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const isAuth = location.pathname === HOME_PAGE 
-  const {form, blurHandler, validateEmail, validateUserName, formValid, setForm, validatePassword, formDirty, formError} = ValidateForm()
+  const {form, blurHandler, validateEmail, validateUserName, formValid, validatePassword, formDirty, formError} = ValidateForm()
     
 
   const onSubmitRegister = (e:React.ChangeEvent<HTMLFormElement>) => {

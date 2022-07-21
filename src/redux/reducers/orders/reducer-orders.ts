@@ -1,8 +1,8 @@
-import { TypeOrdersList } from './../../types/index';
-import { TypeData, Types } from './../types/index';
+import { TypeOrdersList } from './../../../types/index';
+import { TypeData, Types } from './../../types/index';
 
-const initialState:any = {
-  orders:[]
+const initialState:TypeOrdersList = {
+  orders:null
 }
 
 type TypeInitialState = typeof initialState

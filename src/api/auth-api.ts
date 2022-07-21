@@ -11,9 +11,6 @@ export const authAPI = {
   login(data:TypeFormAuth) {
     return instance.post<MeResponseType>('/login', data)
   },
-  logout(id:number) {
-    return instance.delete<number>(`/users/${id}`)
-  },
   register(data:TypeRegisterForm) {
     return instance.post<RegisterResponseType>(`/users`, data)
   }

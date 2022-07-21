@@ -211,5 +211,5 @@ export type TypeOrders = {
 }
 
 export type TypeOrdersList = {
-  orders:TypeOrders[]
+  orders:TypeOrders | null
 }

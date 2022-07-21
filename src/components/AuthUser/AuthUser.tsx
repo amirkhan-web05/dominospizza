@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useAppDispatch } from '../../hooks';
-import { fetchMeAuth } from '../../redux/actions/action-auth';
+import { fetchMeAuth } from '../../redux/actions/auth/action-auth';
 import { TypePopup } from '../../types'
 
 import styles from './AuthUser.module.scss'
@@ -14,15 +14,18 @@ export const AuthUser:React.FC<TypePopup> = ({popup, setPopup}) => {
   const dispatch = useAppDispatch()
   const location = useLocation()
 
+  // useEffect(() => {
+  //   setForm(JSON.parse(localStorage.getItem('user') as any))
+  // }, [])
+
   const isAuth = location.pathname === HOME_PAGE   
+  const {validateEmail, validatePassword, validate, form, formValid, blurHandler, formDirty, formError, setForm} = useForm()
 
   const onSubmitAuth = (e:React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(fetchMeAuth(form))
     setPopup(false)
   }
-
-  const {validateEmail, validatePassword, form, formValid, blurHandler, formDirty, formError} = useForm()
 
   return (
     <>
@@ -34,13 +37,13 @@ export const AuthUser:React.FC<TypePopup> = ({popup, setPopup}) => {
           </div>
           {isAuth ? <form onSubmit={onSubmitAuth} className={styles.popup__form}>
             <div className={styles.popup__reg}>
-              <input value={form.email} onBlur={e => blurHandler(e)} onChange={validateEmail} name='email' className={styles.popup__input} type="text" placeholder='E-mail' />
+              <input value={form.email} onBlur={e => blurHandler(e)} onChange={validate} name='email' className={styles.popup__input} type="text" placeholder='E-mail' />
             </div>
             <div>
               {formDirty.emailDirty && formError.email && <span className={styles['popup__email']}>{formError.email}</span>}
             </div>
             <div className={styles.popup__reg}>
-              <input value={form.password} onBlur={e => blurHandler(e)} onChange={validatePassword} name='password' className={styles.popup__input} type="password" placeholder='Пароль' />
+              <input value={form.password} onBlur={e => blurHandler(e)} onChange={validate} name='password' className={styles.popup__input} type="password" placeholder='Пароль' />
             </div>
             <div>
               {formDirty.passwordDirty && formError.password && <span className={styles['popup__password']}>{formError.password}</span>}

@@ -10,22 +10,23 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 
 import styles from './Header.module.scss'
 
-import locationImg from '../../assets/images/icons8-location-50.png'
-import arrowImg from '../../assets/images/5-2-arrow-transparent.png'
+import locationImg from '../../assets/images/other/icons8-location-50.png'
+import arrowImg from '../../assets/images/other/icons8-down-24.png'
 import basketImg from '../../assets/images/shopping-basket.png'
 import { Outlet } from 'react-router-dom';
 import { Cart } from '../Cart/Cart';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { fetchGetCart } from '../../redux/actions/action-cart';
-import { TypeAuthUser, TypeTicketItems } from '../../types';
+import { fetchGetCart } from '../../redux/actions/cart/action-cart';
+import { TypeTicketItems } from '../../types';
 import { AuthUser } from '../AuthUser/AuthUser';
-import { fetchLogout } from '../../redux/actions/action-auth';
 import { CitiesModalList } from '../CitiesModalList/CitiesModalList';
-import { fetchCities } from '../../redux/actions/action-items';
+import { fetchCities } from '../../redux/actions/items/action-items';
 import { CSSTransition } from 'react-transition-group';
 import { NavBar } from '../NavBar/NavBar';
 import { AxiosResponse } from 'axios';
 import { apiTicket } from '../../api/ticket-api';
+import { selectAuthData, selectCartData, selectCityData } from '../../redux/selectors/selectors';
+import { actions } from '../../redux/actions/creators/action-creators';
 
 const sliderImages = [
   {
@@ -47,10 +48,10 @@ export const Header: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null)
   const cartRef = useRef<null | HTMLDivElement>(null)
 
-  const cart = useAppSelector(state => state.cart.cart)
-  const auth:TypeAuthUser[] | null = useAppSelector(state => state.auth.auth)
+  const {cart} = useAppSelector(selectCartData)
+  const {auth} = useAppSelector(selectAuthData)
   
-  const cities = useAppSelector(state => state.cities.cities)
+  const {cities} = useAppSelector(selectCityData)
   const [ticket, setTicket] = useState<TypeTicketItems[]>([])
   const [valueTicket, setValueTicket] = useState('')
 
@@ -85,8 +86,9 @@ export const Header: React.FC = () => {
 
   const [value, setValue] = useState<string>('')
 
-  const handlerLogoutUser = (id:number) => {
-    dispatch(fetchLogout(id))
+  const logout = () => {
+    localStorage.removeItem('accessToken')
+    dispatch(actions.setLogoutIn(null))
   }
 
   const handlerChangeModal = (): void => {
@@ -95,7 +97,7 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      headerRef.current?.classList.toggle('Header_sticky__3FIZx', window.scrollY > 0)
+      headerRef.current?.classList.toggle(styles.sticky, window.scrollY > 0)
     })    
   }, [headerRef])
 
@@ -123,7 +125,7 @@ export const Header: React.FC = () => {
             <div className="d-flex header__row">
               <div className={styles.header__list}>
                 <span onClick={() => setClosePopup(true)} className={styles.header__item}>
-                  <img className={styles.header__location} width={28} src={locationImg} alt="" /> Москва <img width={10} src={arrowImg} alt="" />
+                  <img className={styles.header__location} width={28} src={locationImg} alt="" /> Москва <img className={styles.arrow__image} width={10} src={arrowImg} alt="" />
                 </span>
                 {closePopup && <CitiesModalList 
                   value={value}
@@ -137,8 +139,8 @@ export const Header: React.FC = () => {
                 />}
               </div>
               <div className={styles.header__list}>
-                <span className={styles.header__item}>Доставка</span>
-                <img width={10} src={arrowImg} alt="" />
+                <span style={{marginRight:5}} className={styles.header__item}>Доставка</span>
+                <img className={styles.arrow__image} width={10} src={arrowImg} alt="" />
               </div>
               <div className={styles.header__list}>
                 <span className={styles.header__item}>Стать Франчайзи</span>
@@ -148,7 +150,7 @@ export const Header: React.FC = () => {
               </div>
             </div>
             {auth ? (
-              <span onClick={() => handlerLogoutUser(auth[0].id)} className={styles.header__item}>
+              <span onClick={logout} className={styles.header__item}>
                 Выйти
               </span>
             ) : (

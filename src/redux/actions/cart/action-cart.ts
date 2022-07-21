@@ -1,9 +1,9 @@
 import { AxiosResponse } from 'axios';
-import { TypeCartItems } from './../../types/index';
-import { actions } from './action-creators';
+import { TypeCartItems } from '../../../types/index';
+import { actions } from '../creators/action-creators';
 
-import { DispatchType, TypeThunkAction } from './../types/index';
-import { cartAPI } from '../../api/cart-api';
+import { DispatchType, TypeThunkAction } from '../../types/index';
+import { cartAPI } from '../../../api/cart-api';
 
 export const fetchGetCart = ():TypeThunkAction => {
   return async (dispatch:DispatchType) => {

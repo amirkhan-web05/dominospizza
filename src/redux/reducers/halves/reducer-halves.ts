@@ -1,5 +1,5 @@
-import { TypeData, Types } from '../types';
-import { TypeHalvesPizzasList } from './../../types/index';
+import { TypeData, Types } from './../../types';
+import { TypeHalvesPizzasList } from './../../../types/index';
 
 const initialState:TypeHalvesPizzasList = {
   halves:[]

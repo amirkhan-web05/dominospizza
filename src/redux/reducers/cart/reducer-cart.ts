@@ -1,5 +1,5 @@
-import { TypeCartList } from './../../types/index';
-import { Types, TypeData } from './../types/index';
+import { TypeCartList } from './../../../types/index';
+import { Types, TypeData } from './../../types/index';
 
 const initialState:TypeCartList = {
   cart:[],

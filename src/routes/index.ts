@@ -1,7 +1,7 @@
 import { SnackPages } from './../pages/SnackPages/SnackPages';
-import { NotFoundPage } from './../pages/NotFoundPage';
+import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { HalvesSection } from '../components/HalvesSection/HalvesSection';
-import { HomePage } from './../pages/HomePage';
+import { HomePage } from '../pages/HomePage/HomePage';
 import { PaymentPage } from '../pages/PaymenPage/PaymentPage';
 
 export const HOME_PAGE = '/'

@@ -1,4 +1,4 @@
-import { TypeCartItems } from './../types/index';
+import { TypeCartItems } from '../types/index';
 
 export const useTotal = (cart:TypeCartItems[]) => {
   const typePrice = 15

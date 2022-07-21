@@ -62,14 +62,42 @@ export const useForm = () => {
     }
   };
 
+  const validate = (e:any) => {
+    switch (e.target.name) {
+      case 'email': 
+        e.preventDefault()
+        setForm({...form, email:e.target.value})
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/  
+        if (!re.test(String(e.target.value).toLowerCase())) {
+          setFormError({...formError, email:'Неккоректный E-mail'})
+        } else {
+          setFormError({...formError, email:''})
+        }
+        break;
+      case 'password':
+        e.preventDefault()
+        setForm({...form, password:e.target.value})
+    
+        if (e.target.value.length < 3 || e.target.value.length > 8) {
+          setFormError({...formError, password:'Пароль должен быть длинее 3 и меньше 8'})
+          if (!e.target.value) {
+            setFormError({...formError, password:'Пароль не может быть пустым'})
+          }
+        } else {
+          setFormError({...formError, password:''})
+        }
+    }
+  }
 
   return {
     form,
     formDirty,
     formError,
     formValid,
+    validate,
     validateEmail,
     blurHandler,
-    validatePassword
+    validatePassword,
+    setForm
   }
 }

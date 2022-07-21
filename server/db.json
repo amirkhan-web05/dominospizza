@@ -733,7 +733,20 @@
       "typePrices": 499
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "amirhanvalman@gmail.com",
+      "password": "$2a$10$lrMNVpT1GApcuicRlV9w5eC71mhtUeMi2RFjGHLTzTbT19u0bXDlC",
+      "username": "Amirkhan",
+      "id": 1
+    },
+    {
+      "email": "test@test.ru",
+      "password": "$2a$10$ddreJBJETz7lK9gaF1gc3OaPiu1nDcRTleKcTP7iImcICw7r5kKA2",
+      "username": "Tester",
+      "id": 2
+    }
+  ],
   "tickets": [
     {
       "id": 1,
@@ -784,32 +797,7 @@
       ]
     }
   ],
-  "orders": [
-    {
-      "name": "",
-      "phone": "",
-      "email": "",
-      "street": "",
-      "home": "",
-      "apartment": "",
-      "driveway": "",
-      "story": "",
-      "intercomCode": "",
-      "id": 1
-    },
-    {
-      "name": "",
-      "phone": "",
-      "email": "",
-      "street": "",
-      "home": "",
-      "apartment": "",
-      "driveway": "",
-      "story": "",
-      "intercomCode": "",
-      "id": 2
-    }
-  ],
+  "orders": [],
   "cities": [
     {
       "coords": {

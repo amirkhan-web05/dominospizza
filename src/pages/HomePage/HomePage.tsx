@@ -1,25 +1,25 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import qs from 'qs'
-import { CartList } from '../components/PizzasData/CartList/CartList'
-import { useAppDispatch, useAppSelector } from '../hooks'
-import { fetchAuth } from '../redux/actions/action-auth'
-import { fetchPlusCart, fetchPostCart } from '../redux/actions/action-cart'
-import { actions } from '../redux/actions/action-creators'
-import { fetchPizzas } from '../redux/actions/action-items'
-import { TypeCartItems, TypeCategoryBtn, TypeSortItems } from '../types'
+import { CartList } from '../../components/PizzasData/CartList/CartList'
+import { useAppDispatch, useAppSelector } from '../../hooks'
+// import { fetchAuth } from '../../redux/actions/auth/action-auth'
+import { fetchPlusCart, fetchPostCart } from '../../redux/actions/cart/action-cart'
+import { actions } from '../../redux/actions/creators/action-creators'
+import { fetchPizzas } from '../../redux/actions/items/action-items'
+import { TypeCartItems, TypeCategoryBtn, TypeSortItems } from '../../types'
 import { useNavigate } from 'react-router-dom'
+import { selectCartData, selectFilterData, selectPizzaData } from '../../redux/selectors/selectors'
 
 export const HomePage:React.FC = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
+  const {cart} = useAppSelector(selectCartData)
+  const {pizzas} = useAppSelector(selectPizzaData)
+  const {sortBy, categoryBtn} = useAppSelector(selectFilterData)
+
   const isSearch = useRef(false)
   const isMountend = useRef(false)
-
-  const cart = useAppSelector(state => state.cart.cart)
-  const pizzas = useAppSelector(state => state.items.pizzas)
-  const sortBy = useAppSelector(state => state.filters.sortBy)
-  const categoryBtn = useAppSelector(state => state.filters.categoryBtn)
 
   const onAddHandlerCart = (obj:TypeCartItems):void => {
     const findItems = cart.find(item => item.id === obj.id) 
@@ -70,9 +70,9 @@ export const HomePage:React.FC = () => {
     isSearch.current = false;
   }, [sortBy, categoryBtn])
 
-  useEffect(() => {
-    dispatch(fetchAuth())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(fetchAuth())
+  // }, [])
 
   const onClickCategoryBtn = useCallback((items:TypeCategoryBtn) => {
     dispatch(actions.setCategoryBtn(items))

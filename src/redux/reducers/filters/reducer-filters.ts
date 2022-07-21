@@ -1,5 +1,5 @@
-import { TypeParams } from './../../types/index';
-import { TypeData, Types } from './../types/index';
+import { TypeParams } from './../../../types/index';
+import { TypeData, Types } from './../../types/index';
 
 const initialState:TypeParams = {
   sortBy: {

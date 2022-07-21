@@ -1,9 +1,9 @@
 import { AxiosResponse } from 'axios';
-import { TypeCategoryBtn, TypeCartItems, TypeCitiesModal, TypeHalvesItems, TypeSnackItems } from './../../types/index';
-import { TypeSort } from './../../api/items-api';
-import { actions } from './action-creators';
-import { DispatchType, TypeThunkAction } from './../types/index';
-import { itemsAPI } from '../../api/items-api';
+import { TypeCategoryBtn, TypeCartItems, TypeCitiesModal, TypeHalvesItems, TypeSnackItems } from '../../../types/index';
+import { TypeSort } from '../../../api/items-api';
+import { actions } from '../creators/action-creators';
+import { DispatchType, TypeThunkAction } from '../../types/index';
+import { itemsAPI } from '../../../api/items-api';
 
 export const fetchPizzas = (sortBy:TypeSort, category:TypeCategoryBtn):TypeThunkAction => async (dispatch:DispatchType) => {
   try {

@@ -1,8 +1,8 @@
 import { AxiosResponse } from 'axios';
-import { actions } from './action-creators';
-import { TypeAuthMaterial, TypeAuthUser, TypeFormAuth, TypeRegisterForm } from './../../types/index';
-import { authAPI } from "../../api/auth-api"
-import { DispatchType, TypeThunkAction } from '../types';
+import { actions } from '../creators/action-creators';
+import { TypeAuthMaterial, TypeAuthUser, TypeFormAuth, TypeRegisterForm } from '../../../types/index';
+import { authAPI } from "../../../api/auth-api"
+import { DispatchType, TypeThunkAction } from '../../types';
 
 export const fetchAuth = ():TypeThunkAction => (dispatch:DispatchType) => {
   try {
@@ -21,21 +21,14 @@ export const fetchAuth = ():TypeThunkAction => (dispatch:DispatchType) => {
 
 export const fetchMeAuth = (user:TypeFormAuth):TypeThunkAction => (dispatch:DispatchType) => {
   try {
-    authAPI.login(user).then(({data}:AxiosResponse<TypeAuthUser[]>) => {
-      dispatch(actions.setAuth(data))
+    authAPI.login(user).then(({data}:AxiosResponse<any>) => {
+      if ('accessToken' in data) {
+        localStorage.setItem('accessToken', JSON.stringify(data.accessToken) as any)
+        dispatch(actions.setAuth(data))
+      }
     })
   } catch (e) {
     console.log('Error:', e);
-  }
-}
-
-export const fetchLogout = (id:number):TypeThunkAction => (dispatch:DispatchType) => {
-  try {
-    authAPI.logout(id).then(() => {
-      dispatch(actions.setLogout(id))
-    })
-  } catch (e) {
-    console.log('Error:', e)
   }
 }
 

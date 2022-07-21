@@ -1,5 +1,5 @@
-import { TypeData, Types } from '../types';
-import { TypeRegister } from './../../types/index';
+import { TypeData, Types } from './../../types';
+import { TypeRegister } from './../../../types/index';
 
 const initialState:TypeRegister = {
   register:null

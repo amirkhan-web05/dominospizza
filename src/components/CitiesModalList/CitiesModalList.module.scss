@@ -14,12 +14,12 @@
   &__inner {
     margin: 5% auto;
     position: relative;
+    z-index: 100000;
     border-radius: 16px;
     padding: 40px 30px 25px;
     background-color: rgb(255, 255, 255);
     width: 40%;
     height: 500px;
-    // height: 100%;
   }
 
   &__search {
@@ -56,16 +56,33 @@
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0, 0.52, 0.58, 1.68) 0s, background-color 0.3s ease 0s;
 
-    &::after, &::before {
+    &::after {
       content: "";
       display: block;
       position: absolute;
-      left: 50%;
-      top: 50%;
+      left: 25%;
+      top: 45%;
       background-color: white;
+      border: 2px solid #fff;
       border-radius: 2px;
-      width: 0px;
+      width: 50%;
+      transform: rotate(45deg);
+      height: 2px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 25%;
+      top: 45%;
+      background-color: white;
+      border: 2px solid #fff;
+      border-radius: 2px;
+      width: 50%;
+      transform: rotate(-45deg);
       height: 2px;
     }
   }
 }
+

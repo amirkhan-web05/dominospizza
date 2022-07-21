@@ -1,5 +1,5 @@
-import { TypeCitiesModalList } from './../../types/index';
-import { TypeData, Types } from './../types/index';
+import { TypeCitiesModalList } from './../../../types/index';
+import { TypeData, Types } from './../../types/index';
 
 const initialState:TypeCitiesModalList = {
   cities:[]

@@ -1,7 +1,7 @@
 import { Dispatch } from 'react';
 import { ThunkAction } from 'redux-thunk';
 import { AppStateType } from '../store';
-import { actions } from './../actions/action-creators';
+import { actions } from '../actions/creators/action-creators';
 
 export enum Types {
   APP_PIZZAS = 'APP/PIZZAS',
@@ -19,6 +19,7 @@ export enum Types {
   APP_AUTH_LOADING = 'APP/AUTH/LOADING',
   APP_AUTH_LOGOUT = 'APP/AUTH/LOGOUT',
   APP_REGISTER = 'APP/REGISTER',
+  APP_IN_LOGOUT = 'APP/IN/LOGOUT',
   APP_CITIES = 'APP/CITIES',
   APP_UPDATE_CART = 'APP/UPDATE/CART',
   APP_HALVES = 'APP/HALVES',

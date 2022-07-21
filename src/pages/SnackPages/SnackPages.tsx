@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
 import { SnackList } from '../../components/SnackData/SnackList/SnackList'
 import { useAppDispatch, useAppSelector } from '../../hooks'
-import { fetchPlusCart, fetchPostCart } from '../../redux/actions/action-cart'
-import { fetchSnacks } from '../../redux/actions/action-items'
+import { fetchPlusCart, fetchPostCart } from '../../redux/actions/cart/action-cart'
+import { fetchSnacks } from '../../redux/actions/items/action-items'
+import { selectCartData, selectSnackData } from '../../redux/selectors/selectors'
 import { TypeSnackItems } from '../../types'
 
 export const SnackPages = () => {
   const dispatch = useAppDispatch()
-  const snacks = useAppSelector(state => state.snacks.snacks)
-  const cart = useAppSelector(state => state.cart.cart)
-
-  console.log(cart)
+  const {snacks} = useAppSelector(selectSnackData)
+  const {cart} = useAppSelector(selectCartData)
 
   useEffect(() => {
     dispatch(fetchSnacks())

@@ -1,5 +1,5 @@
-import { Types, TypeData } from '../types';
-import { TypeCartPizzasList } from '../../types/index';
+import { Types, TypeData } from './../../types';
+import { TypeCartPizzasList } from './../../../types/index';
 
 const initialState:TypeCartPizzasList = {
   pizzas:[],
@@ -7,7 +7,7 @@ const initialState:TypeCartPizzasList = {
 
 type TypeInitialState = typeof initialState
 
-export const items = (state:TypeInitialState = initialState, action:TypeData):TypeInitialState => {
+export const pizzas = (state:TypeInitialState = initialState, action:TypeData):TypeInitialState => {
   switch (action.type) {
     case Types.APP_PIZZAS: {
       return {...state, pizzas:action.pizzas}

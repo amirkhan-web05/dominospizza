@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../hooks'
-import { fetchAuth } from '../redux/actions/action-auth'
+import { fetchAuth } from '../redux/actions/auth/action-auth'
 import { HOME_PAGE } from '../routes'
 
 export const RequireAuth = ({children}:any) => {
@@ -9,7 +9,7 @@ export const RequireAuth = ({children}:any) => {
   const auth = useAppSelector(state => state.auth.auth)
   const loaded = useAppSelector(state => state.auth.loading)
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(fetchAuth())
   }, [])
 
